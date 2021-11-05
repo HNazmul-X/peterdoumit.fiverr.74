@@ -6,11 +6,11 @@
 }
 
 :root {
-  --primary: #8402C0;
+  --primary: #8402c0;
   --dark-text: black;
   --white-color: white;
   --secondary: #00a8ff;
-  --dark-overlay-1:rgba(0, 0, 0, 0.363);
+  --dark-overlay-1: rgba(0, 0, 0, 0.363);
 }
 
 .theme-primary {
@@ -232,73 +232,30 @@ header .header-spacer {
 }
 
 #featured-work #sectionTitle {
-  --color:var(--primary);
+  --color: var(--primary);
 }
 
-@-webkit-keyframes fade-in-from-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-  }
-  20% {
-    opacity: 0;
-    -webkit-transform: translate(-40%);
-            transform: translate(-40%);
-  }
-  40% {
-    opacity: 0;
-    -webkit-transform: translate(-30%);
-            transform: translate(-30%);
-  }
-  60% {
-    opacity: 0.3;
-    -webkit-transform: translate(-20%);
-            transform: translate(-20%);
-  }
-  80% {
-    opacity: 0.5;
-    -webkit-transform: translate(-10%);
-            transform: translate(-10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+/* COMMENT
+ WORKED WITH 
+ */
+#worked_with {
+  padding: 15vmin 0;
+  background: var(--secondary);
+  position: relative;
+  z-index: 5;
 }
 
-@keyframes fade-in-from-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-  }
-  20% {
-    opacity: 0;
-    -webkit-transform: translate(-40%);
-            transform: translate(-40%);
-  }
-  40% {
-    opacity: 0;
-    -webkit-transform: translate(-30%);
-            transform: translate(-30%);
-  }
-  60% {
-    opacity: 0.3;
-    -webkit-transform: translate(-20%);
-            transform: translate(-20%);
-  }
-  80% {
-    opacity: 0.5;
-    -webkit-transform: translate(-10%);
-            transform: translate(-10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+#worked_with .worked-with-left__logos-area {
+  height: 100%;
+  row-gap: 15vmin;
+}
+
+#worked_with .worked-with-left__logos-area .worked-with-left__logos {
+  margin: auto;
+}
+
+#worked_with .worked-with-left__logos-area .worked-with-left__logos img {
+  width: 70%;
 }
 
 #sectionTitle {

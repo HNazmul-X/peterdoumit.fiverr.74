@@ -1,21 +1,19 @@
 :root {
-    --primary: #8402C0;
+    --primary: #8402c0;
     --dark-text: black;
     --white-color: white;
     --secondary: #00a8ff;
-    --dark-overlay-1:rgba(0, 0, 0, 0.363);
+    --dark-overlay-1: rgba(0, 0, 0, 0.363);
 }
 
-$colors: primary,dark-text,white-color,secondary,dark-overlay-1;
+$colors: primary, dark-text, white-color, secondary, dark-overlay-1;
 @each $color in $colors {
-    .theme-#{$color}{
-        color:var(--#{$color})
+    .theme-#{$color} {
+        color: var(--#{$color});
     }
-    .theme-bg-#{$color}{
-        background:var(--#{$color})
+    .theme-bg-#{$color} {
+        background: var(--#{$color});
     }
-
-    
 }
 
 header {
@@ -155,47 +153,40 @@ header {
     position: relative;
     z-index: 5;
     background: var(--secondary);
-    padding: 30px 0;;
+    padding: 30px 0;
     padding-bottom: 10vmin;
 }
 
-
 /* COMMENT 
  WHAT WE DO */
- #featured-work{
-     position: relative;
-     z-index: 5;
-     padding: 7vmin 0;
-     background: var(--white-color);
-     color:var(--primary);
-     #sectionTitle{
-         --color:var(--primary);
-     }
- }
+#featured-work {
+    position: relative;
+    z-index: 5;
+    padding: 7vmin 0;
+    background: var(--white-color);
+    color: var(--primary);
+    #sectionTitle {
+        --color: var(--primary);
+    }
+}
 
-@keyframes fade-in-from-left {
-    0%{
-        opacity: 0;
-        transform: translate(-50%);
-    }
-    20%{
-        opacity: 0;
-        transform: translate(-40%);
-    }
-    40%{
-        opacity: 0;
-        transform: translate(-30%);
-    }
-    60%{
-        opacity: 0.3;
-        transform: translate(-20%);
-    }
-    80%{
-        opacity: 0.5;
-        transform: translate(-10%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0);
+/* COMMENT
+ WORKED WITH 
+ */
+#worked_with {
+    padding: 15vmin 0;
+    background: var(--secondary);
+    position: relative;
+    z-index: 5;
+
+    .worked-with-left__logos-area {
+        height: 100%;
+        row-gap: 15vmin;
+        .worked-with-left__logos {
+            margin:  auto;
+            img{
+                width: 70%;
+            }
+        }
     }
 }
