@@ -1,8 +1,8 @@
-import BULB_ICON from "../../Images/icon/bulb.svg"
-import SHEILD_ICON from "../../Images/icon/sheild.svg"
-import DESIGN_TOOLS_ICON from "../../Images/icon/designtools.svg"
-import WEBDISPLAY_ICON from "../../Images/icon/webdisplay.svg"
-import VIDEO_ICON from "../../Images/icon/video.svg"
+import BULB_ICON from "../Images/icon/bulb.svg"
+import SHEILD_ICON from "../Images/icon/sheild.svg"
+import DESIGN_TOOLS_ICON from "../Images/icon/designtools.svg"
+import WEBDISPLAY_ICON from "../Images/icon/webdisplay.svg"
+import VIDEO_ICON from "../Images/icon/video.svg"
 
 
 export const ServicesIconAndTextData = [ 

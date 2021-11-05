@@ -1,7 +1,7 @@
 import React from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import ServiceTypeIconText from "../../Components/ServiceTypeIconText/ServiceTypeIconText";
-import {ServicesIconAndTextData} from "./homeData"
+import {ServicesIconAndTextData} from "../../Data/homeData"
 
 const WhatWeDo = () => {
     

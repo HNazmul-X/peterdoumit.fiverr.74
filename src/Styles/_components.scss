@@ -1,5 +1,6 @@
 #sectionTitle {
-    color: var(--white-color);
+    --color:var(--white-color);
+    color: var(--color);
     padding:40px 0px;
     h1 {
         font-size: 70px;
@@ -11,7 +12,7 @@
         font-size: 22px;
     }
     .line{
-        background:var(--white-color);
+        background:var(--color);
         width:40%;
         height:10px;
         margin-top: 30px;;
