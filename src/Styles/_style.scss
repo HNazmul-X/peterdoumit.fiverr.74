@@ -3,7 +3,21 @@
     --dark-text: black;
     --white-color: white;
     --secondary: #00a8ff;
+    --dark-overlay-1:rgba(0, 0, 0, 0.363);
 }
+
+$colors: primary,dark-text,white-color,secondary,dark-overlay-1;
+@each $color in $colors {
+    .theme-#{$color}{
+        color:var(--#{$color})
+    }
+    .theme-bg-#{$color}{
+        background:var(--#{$color})
+    }
+
+    
+}
+
 header {
     #header {
         width: 100%;
@@ -158,3 +172,30 @@ header {
          --color:var(--primary);
      }
  }
+
+@keyframes fade-in-from-left {
+    0%{
+        opacity: 0;
+        transform: translate(-50%);
+    }
+    20%{
+        opacity: 0;
+        transform: translate(-40%);
+    }
+    40%{
+        opacity: 0;
+        transform: translate(-30%);
+    }
+    60%{
+        opacity: 0.3;
+        transform: translate(-20%);
+    }
+    80%{
+        opacity: 0.5;
+        transform: translate(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
