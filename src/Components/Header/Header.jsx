@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Header = () => {
-    return(
+const Header = ({children}) => {
+    return (
         <header>
             <section id="header">
                 <div className="video-container"></div>

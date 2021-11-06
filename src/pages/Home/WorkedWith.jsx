@@ -21,14 +21,16 @@ const WorkedWith = () => {
                         <p className="fs-4 theme-white-color">
                             We love partnering with organisations that are passionate about their purpose and take a forward-thinking approach to the impact they can have.
                         </p>
-                        <button className="btn btn-outline-light border-2 fs-4 p-4 mt-4">Our Services</button>
+                        <button className="btn rounded-0 btn-outline-light border-2 fs-4 p-4 mt-4">Our Services</button>
                     </div>
 
-                    <div className="col-lg-5 ms-auto p-3">
+                    <div className="col-lg-6 ms-auto p-3">
                         <div className="row w-100 row-cols-3 worked-with-left__logos-area">
                             {companies_logos.map((img) => (
                                 <div className="col worked-with-left__logos">
-                                    <img src={img}  alt={img} />
+                                    <div className="worked-with-left__logo-wrapper">
+                                        <img src={img} alt={img} />
+                                    </div>
                                 </div>
                             ))}
                         </div>
