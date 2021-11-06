@@ -1,0 +1,122 @@
+
+
+#accordion .card{
+    border:none;
+}
+
+
+.faq-content-body{
+    background-color: #F1F1F1;
+}
+
+.faq-section {
+    background: #fdfdfd;
+    min-height: 100vh;
+    padding: 10vh 0 0;
+}
+.faq-title h2 {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  line-height: 1;
+  color: #7F3AA5;
+
+}
+
+
+.faq-button button{
+  padding: 5px 20px;
+  border: 2px solid #7500B4;
+  background:none;
+  color: #7500B4;
+}
+
+
+
+
+.faq-title p {
+  padding: 0 190px;
+  margin-bottom: 10px;
+}
+
+.CustomFaq {
+  background: #FFFFFF;
+  box-shadow: 0 1px 48px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+
+
+
+.CustomFaq .card .card-header {
+  padding: 0px;
+  border: none;
+  background: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-left: 6px solid #7500B4;
+}
+
+.CustomFaq .card .card-header:hover {
+    background: rgba(233, 30, 99, 0.1);
+    padding-left: 10px;
+}
+.CustomFaq .card .card-header .faq-title {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #7500B4;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.CustomFaq .card .card-header .faq-title .badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 14px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  background: #E91E63;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.CustomFaq .card .card-body {
+  padding-left: 35px;
+  padding-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6F8BA4;
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+
+.CustomFaq .card .card-body p {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 991px) {
+  .CustomFaq {
+    margin-bottom: 30px;
+  }
+  .CustomFaq .card .card-header .faq-title {
+    line-height: 26px;
+    margin-top: 10px;
+  }
+}
