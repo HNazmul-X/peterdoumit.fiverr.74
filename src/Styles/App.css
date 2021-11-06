@@ -10,7 +10,12 @@
   --dark-text: black;
   --white-color: white;
   --secondary: #00a8ff;
-  --dark-overlay-1: rgba(0, 0, 0, 0.363);
+  --dark-overlay-1: #0000005d;
+  --lg-heading:clamp(70px,10rem,10vw);
+  --md-heading:clamp(40px,4.5rem,calc(12vw+40px))
+
+
+;
 }
 
 .theme-primary {
@@ -85,7 +90,7 @@ header #header .header__text-wrapper {
 }
 
 header #header .header__text-wrapper .header__text h1 {
-  font-size: clamp(100px, 150px, 300px);
+  font-size: var(--lg-heading);
   font-weight: 800;
 }
 
@@ -136,7 +141,7 @@ header .header-spacer {
   width: 100%;
   height: 7px;
   top: 0px;
-  background: var(--secondary);
+  background: var(--white-color);
   margin-bottom: 5px;
   position: absolute;
   -webkit-transition: 0.5s;
@@ -185,14 +190,22 @@ header .header-spacer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items {
   width: 100%;
+  display: block;
 }
 
 #navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link {
-  display: block;
+  display: inline-block;
   color: var(--white-color);
   text-decoration: none;
   -webkit-transition: 0.5s ease-in;
@@ -203,7 +216,7 @@ header .header-spacer {
 }
 
 #navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link h1 {
-  font-size: 80px;
+  font-size: var(--md-heading);
   font-weight: 800;
 }
 

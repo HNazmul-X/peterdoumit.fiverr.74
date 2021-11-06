@@ -2,8 +2,10 @@ import React from 'react';
 import FeatureWorkCard from '../../Components/FeatureWorkCard/FeatureWorkCard';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import { featureWorkCardData } from '../../Data/featureWorkData';
+import {useNavigate} from "react-router-dom"
 
 const FeaturedWork = () => {
+    const navigate = useNavigate()
     return (
         <section id="featured-work">
             <div className="container-xxl">
@@ -17,7 +19,7 @@ const FeaturedWork = () => {
                 </div>
 
                 <div className="text-center mt-3">
-                    <button className="theme-bg-primary fs-5 theme-white-color border-0 p-3 px-5">View All Work</button>
+                    <button onClick={() => navigate("/contact")} className="theme-bg-primary fs-5 theme-white-color border-0 p-3 px-5">View All Work</button>
                 </div>
             </div>
         </section>

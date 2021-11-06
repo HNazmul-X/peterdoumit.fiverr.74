@@ -9,8 +9,7 @@ const Footer = () => {
             console.clear()
             const windowHeight = window.innerHeight
             const {top:elementfromtop} = footerStaticUpper.getBoundingClientRect()
-            console.log(elementfromtop)
-            if(windowHeight>elementfromtop){
+            if((windowHeight - footerStaticUpper.clientHeight)>elementfromtop){
                 footerParallax.style.cssText = "z-index:4"
             } else {
                 footerParallax.style.cssText = "x-index:0"
