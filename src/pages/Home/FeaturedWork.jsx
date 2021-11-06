@@ -8,7 +8,7 @@ const FeaturedWork = () => {
         <section id="featured-work">
             <div className="container-xxl">
                 <SectionTitle></SectionTitle>
-                <div className="row row-cols-3 mt-3">
+                <div className="row row-cols-1 col-sm-8 col-md-12 row-cols-md-2 row-cols-lg-3 mx-auto mt-3">
                     {featureWorkCardData.map((data) => (
                         <div className="col">
                             <FeatureWorkCard data={data} />

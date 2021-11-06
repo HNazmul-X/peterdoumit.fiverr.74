@@ -1,5 +1,5 @@
 :root {
-    --primary: #8402c0;
+    --primary: #f89558;
     --dark-text: black;
     --white-color: white;
     --secondary: #00a8ff;
@@ -16,7 +16,17 @@ $colors: primary, dark-text, white-color, secondary, dark-overlay-1;
     }
 }
 
-header {
+[class*="btn"]{
+    &:focus,&:active{
+        box-shadow: none !important;
+    }
+};
+
+p{
+    margin-bottom: 0px;
+}
+
+header{
     #header {
         width: 100%;
         height: 100%;
@@ -34,7 +44,7 @@ header {
             color: var(--white-color);
             .header__text {
                 h1 {
-                    font-size: 110px;
+                    font-size:clamp(100px, 150px, 300px);
                     font-weight: 800;
                 }
             }
@@ -147,6 +157,7 @@ header {
     }
 }
 
+
 /* COMMENT 
  WHAT WE DO */
 #what-we-do {
@@ -178,15 +189,36 @@ header {
     background: var(--secondary);
     position: relative;
     z-index: 5;
+    .btn.btn-outline-light{
+        font-weight: 500 !important;
+        &:hover{
+            color:var(--secondary) !important;
+        }
+    }
 
     .worked-with-left__logos-area {
         height: 100%;
-        row-gap: 15vmin;
         .worked-with-left__logos {
-            margin:  auto;
-            img{
-                width: 70%;
+            .worked-with-left__logo-wrapper{
+                position: relative;
+                padding-bottom: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    position: absolute;
+                    width: 40%;;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%) scale(1.2);
+                }
             }
         }
+    }
+}
+
+@media screen and (max-width:770px) {
+    .fs-5{
+        font-size: 16px !important;
     }
 }
