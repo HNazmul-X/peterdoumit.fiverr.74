@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes,Route } from 'react-router-dom';
-import About from '../pages/about/About';
 import Contact from '../pages/contact/Contact';
 import FaqPage from '../pages/FAQPage/FaqPage';
 import Home from '../pages/Home/Home';
@@ -11,7 +10,6 @@ const mainRouter = () => {
         <Routes>
             <Route path="/" element={<Home></Home>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/about" element={<About/>}/>
             <Route path="/faq" element={<FaqPage/>}/>
             <Route path="/services" element={<Services/>}/>
         </Routes>

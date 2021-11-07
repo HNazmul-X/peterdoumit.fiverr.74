@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Header = ({children,title,subtitle}) => {
+const Header = ({children,title,subtitle,titleLg}) => {
 
     useEffect(function(){
         const circle = document.querySelector("header .header-animation-circle")
@@ -20,7 +20,7 @@ const Header = ({children,title,subtitle}) => {
                 <div className="video-container"></div>
                 <div className="header__text-wrapper container-xxl">
                     <div className="header__text">
-                        <h1>{title}</h1>
+                        <h1 className={`${titleLg?"text-c-lg":""}`}>{title}</h1>
                         <h4 className="mt-4">{subtitle && subtitle}</h4>
                     </div>
                 </div>

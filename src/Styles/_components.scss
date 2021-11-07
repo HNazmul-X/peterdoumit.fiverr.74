@@ -1,8 +1,8 @@
 #sectionTitle {
     --color: var(--white-color);
-    --padding:40px 0px;
-    --line-mt:30px;
-    --text-display:block;
+    --padding: 40px 0px;
+    --line-mt: 30px;
+    --text-display: block;
     color: var(--color);
     padding: var(--padding);
     h1 {
@@ -112,7 +112,7 @@
             .iconify,
             .category__text {
                 transform: translateX(0);
-                opacity: 1;;
+                opacity: 1;
             }
             .iconify {
                 animation-delay: 0.3s;
@@ -121,20 +121,18 @@
     }
 }
 
-
 /* COMMENT footer css start form here */
-footer#footer{
-    .footer-static-upper{
+footer#footer {
+    .footer-static-upper {
         position: relative;
         z-index: 5;
         background: var(--primary);
-        color:var(--white-color)
-        ;padding:7vmin 0px;
+        color: var(--white-color);
+        padding: 7vmin 0px;
         margin-bottom: 100vh;
     }
-    
-    
-    .footer-fixed-parallax{
+
+    .footer-fixed-parallax {
         width: 100%;
         height: 100vh;
         display: flex;
@@ -146,31 +144,31 @@ footer#footer{
         background-color: rgba(0, 0, 0, 0.315);
         background-blend-mode: soft-light;
         background-size: cover;
-        top: 0px;;  
+        top: 0px;
         overflow-y: scroll;
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 0px;
         }
     }
 }
 
-.what-we-do-card{
+.what-we-do-card {
     padding: 2.5rem 1rem;
     text-align: center;
-    color:var(--white-color);
-    margin-bottom: 30px;;
+    color: var(--white-color);
+    margin-bottom: 30px;
     box-shadow: var(--lg-shadow);
     height: 100%;
     margin-bottom: 20px;
-    .icon{
+    .icon {
         text-align: center;
-        margin-bottom: 20px;;
-        img{
-            max-width: 100px;;
+        margin-bottom: 20px;
+        img {
+            max-width: 100px;
         }
     }
-    .text{
-        h5{
+    .text {
+        h5 {
             font-weight: 600;
             font-size: 22px;
         }
@@ -178,66 +176,93 @@ footer#footer{
 }
 
 /* COMMENT testimonials Card */
-#testimonials-card{
+#testimonials-card {
     margin-bottom: 3.5rem;
-    .testimonials-card__container{
-        padding:2rem 4rem;
+    .testimonials-card__container {
+        padding: 2rem 4rem;
         padding-bottom: 1rem;
-        background:var(--white-color)
-        ;box-shadow: var(--lg-shadow);
+        background: var(--white-color);
+        box-shadow: var(--lg-shadow);
         max-width: 1000px;
         margin: auto;
-        *{
+        * {
             transition: 0.3s ease-in;
             transition-delay: 300ms;
         }
 
-        .testimonials-card__review-text{
+        .testimonials-card__review-text {
             text-align: center;
             padding-top: 2rem;
-            p{
+            p {
                 font-size: 17px;
-                color:var(--primary)
-                ;transform: translateY(-100px);
+                color: var(--primary);
+                transform: translateY(-100px);
                 opacity: 0;
             }
         }
 
-        .testimonials-card__review-stars{
-            .star{
-                --delay:500ms;
+        .testimonials-card__review-stars {
+            .star {
+                --delay: 500ms;
                 transform: scale(0);
                 transition: 0.5s;
                 transition-delay: var(--delay);
             }
         }
 
-        .testimonials-card__user-info{
-
+        .testimonials-card__user-info {
             display: flex;
             flex-flow: column wrap;
             align-items: center;
             margin-top: 2rem;
             transform: translateY(50px);
             opacity: 0;
-            .name{
+            .name {
                 margin-bottom: 0px;
                 font-weight: bold;
                 color: var(--primary-very-dark);
             }
 
-            .profile{
+            .profile {
                 margin-bottom: -3.5rem;
                 max-width: 100px;
                 margin-top: 10px;
                 clip-path: circle(50% at 50%);
                 transition-delay: 600ms;
             }
-            .title{
-                color:var(--grey-color);
+            .title {
+                color: var(--grey-color);
                 font-weight: 600;
-
             }
+        }
+    }
+}
+
+/* COMMENT faq Card */
+.faq-card {
+    margin-bottom: 1.2rem;
+    .faq-question-label {
+        border: none;
+        padding: 1.2rem 2rem;
+        display: block;
+        width: 100%;
+        text-align: start;
+        background: var(--white-color);
+        box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.05), 0px 11px 44px rgba(2, 64, 96, 0.07);
+        border-radius: 5px;
+        font-size:1.5rem;
+        font-weight: bold;
+        color:var(--primary);
+        border-left: 5px solid var(--primary);
+        z-index: 1;
+
+    }
+
+    .faq-answer{
+        background:var(--white-color);
+        .faq-answer-body{
+            padding:20px;
+            color:var(--primary-very-dark);
         }
     }
 }

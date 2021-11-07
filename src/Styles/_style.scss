@@ -10,7 +10,7 @@ $primary: #ff9452;
     --white-color: white;
     --secondary: #00a8ff;
     --dark-overlay-1: #0000005d;
-    --lg-heading: 9rem;
+    --lg-heading: 8.8rem;
     --md-heading: 5rem;
     --lg-shadow: 3px 6px 51px 5px rgba(0, 0, 0, 0.08);
     border-radius: 22px;
@@ -75,6 +75,9 @@ header {
                     font-size: var(--md-heading);
                     font-weight: 800;
                     text-align: center;
+                    &.text-c-lg{
+                        font-size: var(--lg-heading);
+                    }
                 }
             }
         }
@@ -412,5 +415,24 @@ section#business{
         filter: grayscale(90%);
         z-index: -1;
     }
+}
+
+
+
+/* COMMENT FAQ Page Design */
+
+
+#Faq-answer-question{
+    background: var(--primary-very-light);
+    position: relative;
+    z-index: 5;
+    padding:3rem 0;
+    padding-top: 7rem;
+
+}
+.btn-theme-primary-outline{
+    border: 1px solid var(--primary);
+    background: none;
+    color: var(--primary);
 }
 
