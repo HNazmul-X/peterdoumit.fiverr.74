@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({children}) => {
+const Header = ({children,title,subtitle}) => {
     return (
         <header>
             <section id="header">
@@ -8,9 +8,9 @@ const Header = ({children}) => {
                 <div className="header__text-wrapper container-xxl">
                     <div className="header__text">
                         <h1>
-                            Design For <br /> impact
+                            {title}
                         </h1>
-                        <h4 className="mt-4">We're a design agency working with organizations that make a difference</h4>
+                        <h4 className="mt-4">{subtitle&&subtitle}</h4>
                     </div>
                 </div>
             </section>

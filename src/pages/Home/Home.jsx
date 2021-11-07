@@ -7,10 +7,11 @@ import WorkedWith from "./WorkedWith";
 const Home = () => {
     return (
         <>
-            <Header></Header>
+            <Header
+                title="WE BUILD UNIQUE DIGITAL INSTRUMENTS FOR YOUR BUSINESS."></Header>
             <WhatWeDo></WhatWeDo>
-            <FeaturedWork/>
-            <WorkedWith/>
+            <FeaturedWork />
+            <WorkedWith />
         </>
     );
 };
