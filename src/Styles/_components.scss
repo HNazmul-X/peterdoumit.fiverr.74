@@ -1,7 +1,10 @@
 #sectionTitle {
     --color: var(--white-color);
+    --padding:40px 0px;
+    --line-mt:30px;
+    --text-display:block;
     color: var(--color);
-    padding: 40px 0px;
+    padding: var(--padding);
     h1 {
         font-size: 70px;
         font-weight: 700;
@@ -10,12 +13,13 @@
         max-width: 800px;
         margin: 40px 0px;
         font-size: 22px;
+        display: var(--text-display);
     }
     .line {
         background: var(--color);
         width: 40%;
         height: 10px;
-        margin-top: 30px;
+        margin-top: var(--line-mt);
     }
 }
 
@@ -156,11 +160,84 @@ footer#footer{
     color:var(--white-color);
     margin-bottom: 30px;;
     box-shadow: var(--lg-shadow);
+    height: 100%;
+    margin-bottom: 20px;
     .icon{
         text-align: center;
-        margin-bottom: 10px;;
+        margin-bottom: 20px;;
         img{
             max-width: 100px;;
+        }
+    }
+    .text{
+        h5{
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
+}
+
+/* COMMENT testimonials Card */
+#testimonials-card{
+    margin-bottom: 3.5rem;
+    .testimonials-card__container{
+        padding:2rem 4rem;
+        padding-bottom: 1rem;
+        background:var(--white-color)
+        ;box-shadow: var(--lg-shadow);
+        max-width: 1000px;
+        margin: auto;
+        *{
+            transition: 0.3s ease-in;
+            transition-delay: 300ms;
+        }
+
+        .testimonials-card__review-text{
+            text-align: center;
+            padding-top: 2rem;
+            p{
+                font-size: 17px;
+                color:var(--primary)
+                ;transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        .testimonials-card__review-stars{
+            .star{
+                --delay:500ms;
+                transform: scale(0);
+                transition: 0.5s;
+                transition-delay: var(--delay);
+            }
+        }
+
+        .testimonials-card__user-info{
+
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            margin-top: 2rem;
+            transform: translateY(50px);
+            opacity: 0;
+            .name{
+                margin-bottom: 0px;
+                font-weight: bold;
+                color: var(--primary-very-dark);
+            }
+
+            .profile{
+                margin-bottom: -3.5rem;
+                max-width: 100px;
+                margin-top: 10px;
+                clip-path: circle(50% at 50%);
+                transition-delay: 600ms;
+            }
+            .title{
+                color:var(--grey-color);
+                font-weight: 600;
+
+            }
         }
     }
 }

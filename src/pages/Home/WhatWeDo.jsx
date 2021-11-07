@@ -16,7 +16,7 @@ const WhatWeDo = () => {
                 
                 <div className="row row-cols-1 row-cols-sm-2 col-12 mx-auto row-cols-lg-3">
                     {ServicesIconAndTextData?.map((data,index) => (
-                        <div key={index} className="col"> 
+                        <div key={index} className="col mb-4"> 
                             <WhatWeDoCard data={data}/>
                         </div>
                     ))}

@@ -3,6 +3,9 @@ $primary: #ff9452;
 :root {
     --primary: #ff9452;
     --primary-light: #fec9a8;
+    --primary-very-light: #ffefe6;
+    --primary-very-dark: #866855;
+    --grey-color: #c1c1c1;
     --dark-text: black;
     --white-color: white;
     --secondary: #00a8ff;
@@ -29,6 +32,21 @@ $colors: primary, dark-text, white-color, secondary, dark-overlay-1;
         box-shadow: none !important;
     }
 }
+#cm-cursor{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 5;
+        background: red;
+        transform: translate(-50%,-50%);
+        z-index: 1000;
+        top:0px;
+        left:0px;
+        pointer-events: none;
+        display: none;
+
+    }
 
 p {
     margin-bottom: 0px;
@@ -305,3 +323,94 @@ contact us page css here
         }
     }
 }
+
+/* testimonials */
+#testimonials {
+    position: relative;
+    z-index: 5;
+    background: var(--primary-very-light);
+    padding: 1rem 0;
+    padding-bottom: 4rem;
+
+    #sectionTitle {
+        --color: var(--primary);
+        --text-display: none;
+        --line-mt: 10px;
+        margin-bottom: 2.5rem;
+    }
+
+    .slick-slider {
+        .slick-slide.slick-active {
+            div#testimonials-card {
+                div.testimonials-card__container {
+                    div.testimonials-card__review-text {
+                        p {
+                            transform: translate(0);
+                            opacity: 1;
+                        }
+                    }
+                    .testimonials-card__review-stars {
+                        .star {
+                            transform: scale(1);
+                        }
+                    }
+
+                    div.testimonials-card__user-info {
+                        transform: translate(0);
+                        opacity: 1;
+                        .profile {
+                            clip-path: circle(70% at 50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-arrow {
+            background: var(--primary);
+            width: 60px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+            &::before {
+                font-size: 1.5rem !important;
+                color: var(--white-color);
+            }
+            &.slick-prev {
+                left: 70px;
+            }
+            &.slick-next {
+                right: 70px;
+            }
+        }
+    }
+}
+
+
+/* 
+COMMENT
+Business Section 
+*/
+section#business{
+    padding: 5rem;
+    background: var(--primary);
+    ;position: relative;
+    z-index: 5;
+    min-height: 60vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    
+    .section-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(90%);
+        z-index: -1;
+    }
+}
+
