@@ -1,6 +1,5 @@
 import React from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
-import ServiceTypeIconText from "../../Components/ServiceTypeIconText/ServiceTypeIconText";
 import WhatWeDoCard from "../../Components/whatWeDoCard/WhatWeDoCard";
 import {ServicesIconAndTextData} from "../../Data/homeData"
 
