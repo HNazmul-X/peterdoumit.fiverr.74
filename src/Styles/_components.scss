@@ -149,3 +149,18 @@ footer#footer{
         }
     }
 }
+
+.what-we-do-card{
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color:var(--white-color);
+    margin-bottom: 30px;;
+    box-shadow: var(--lg-shadow);
+    .icon{
+        text-align: center;
+        margin-bottom: 10px;;
+        img{
+            max-width: 100px;;
+        }
+    }
+}

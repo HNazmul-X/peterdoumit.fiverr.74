@@ -6,17 +6,16 @@
 }
 
 :root {
-  --primary-h: 23;
-  --primary-s: 99%;
-  --primary-l: 66%;
-  --primary-o: 1;
-  --primary: hsla(var(--primary-h), var(--primary-s), var(--primary-l), var(--primary-o));
+  --primary: #ff9452;
+  --primary-light: #fec9a8;
   --dark-text: black;
   --white-color: white;
   --secondary: #00a8ff;
   --dark-overlay-1: #0000005d;
-  --lg-heading: clamp(70px, 10rem, 10vw);
-  --md-heading: clamp(40px, 4.5rem, calc(12vw+40px));
+  --lg-heading: 9rem;
+  --md-heading: 5rem;
+  --lg-shadow: 3px 6px 51px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
 }
 
 .theme-primary {
@@ -64,19 +63,12 @@
           box-shadow: none !important;
 }
 
-.glass-primary, #contact-us-form .form-area {
-  --glass-c1-o: 20%;
-  --glass-c2-o: 0%;
-  --color1: hsla(var(--primary-h), var(--primary-s), var(--primary-l), var(--glass-c1-o));
-  --color2: hsla(var(--primary-h), var(--primary-s), var(--primary-l), var(--glass-c2-o));
-  background: linear-gradient(239.6deg, var(--color1) 28.15%, var(--color2) 98.09%);
-  border: 2px solid var(--color1);
-  -webkit-backdrop-filter: blur(24px);
-          backdrop-filter: blur(24px);
-}
-
 p {
   margin-bottom: 0px;
+}
+
+header {
+  position: relative;
 }
 
 header #header {
@@ -115,6 +107,27 @@ header .header-spacer {
   height: 100vh;
   padding: 100px;
   z-index: -1;
+}
+
+header .header-animation-circle {
+  width: 100%;
+  height: 100%;
+  background: var(--primary-light);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 4;
+  -webkit-clip-path: circle(13% at -1% 99%);
+          clip-path: circle(13% at -1% 99%);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+header #header-svg {
+  position: absolute;
+  z-index: 5;
+  top: 10vh;
+  left: 0px;
 }
 
 @media screen and (min-width: 992px) {
@@ -379,7 +392,7 @@ contact us page css here
 }
 
 #contact-page .header__text-wrapper .header__text h1 {
-  font-size: clamp(60px, 13rem, 10vw) !important;
+  font-size: var(--lg-heading) !important;
 }
 
 #sectionTitle {
@@ -559,5 +572,23 @@ footer#footer .footer-fixed-parallax {
 
 footer#footer .footer-fixed-parallax::-webkit-scrollbar {
   width: 0px;
+}
+
+.what-we-do-card {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 30px;
+  -webkit-box-shadow: var(--lg-shadow);
+          box-shadow: var(--lg-shadow);
+}
+
+.what-we-do-card .icon {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.what-we-do-card .icon img {
+  max-width: 100px;
 }
 /*# sourceMappingURL=App.css.map */

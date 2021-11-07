@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import ServiceTypeIconText from "../../Components/ServiceTypeIconText/ServiceTypeIconText";
+import WhatWeDoCard from "../../Components/whatWeDoCard/WhatWeDoCard";
 import {ServicesIconAndTextData} from "../../Data/homeData"
 
 const WhatWeDo = () => {
@@ -9,15 +10,15 @@ const WhatWeDo = () => {
     return (
         <section id="what-we-do">
             <div className="container-xxl">
-                <SectionTitle title="Our services">
+                <SectionTitle title="What we do">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dicta. <br />
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque fugiat eligendi est?
                 </SectionTitle>
                 
-                <div className="row row-cols-1 row-cols-sm-2 col-12 col-md-8 col-lg-12 mx-auto row-cols-lg-5">
-                    {ServicesIconAndTextData?.map(data => (
-                        <div className="col"> 
-                            <ServiceTypeIconText services={data}/>
+                <div className="row row-cols-1 row-cols-sm-2 col-12 mx-auto row-cols-lg-3">
+                    {ServicesIconAndTextData?.map((data,index) => (
+                        <div key={index} className="col"> 
+                            <WhatWeDoCard data={data}/>
                         </div>
                     ))}
                 </div>
