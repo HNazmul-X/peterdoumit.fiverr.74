@@ -14,6 +14,7 @@
   --dark-text: black;
   --white-color: white;
   --secondary: #00a8ff;
+  --secondary-very-light: #7fd3ff;
   --dark-overlay-1: #0000005d;
   --lg-heading: 8.8rem;
   --md-heading: 5rem;
@@ -110,6 +111,7 @@ header #header .header__text-wrapper {
       -ms-flex-align: center;
           align-items: center;
   color: var(--white-color);
+  position: relative;
 }
 
 header #header .header__text-wrapper .header__text {
@@ -124,6 +126,24 @@ header #header .header__text-wrapper .header__text h1 {
 
 header #header .header__text-wrapper .header__text h1.text-c-lg {
   font-size: var(--lg-heading);
+}
+
+header #header .header__text-wrapper .header__text .scroll-down {
+  text-align: end;
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+}
+
+header #header .header__text-wrapper .header__text .scroll-down::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background: var(--white-color);
+  right: -18%;
+  top: -0%;
 }
 
 header .header-spacer {
@@ -386,32 +406,60 @@ contact us page css here
           align-items: center;
 }
 
-#contact-us-form .form-area {
-  padding: clamp(20px, 10rem, 5vw);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 10px 10px 38px 10px rgba(0, 0, 0, 0.68);
-          box-shadow: 10px 10px 38px 10px rgba(0, 0, 0, 0.68);
-  border-radius: 21px;
-  margin: 2rem auto;
-  overflow: hidden;
+#contact-us-form .form-area .contact-form-input_wrapper {
+  padding: 10px;
 }
 
-#contact-us-form .form-area .headline {
-  color: var(--color1);
-  margin-top: -90px;
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input {
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  width: 100%;
+  font-style: italic;
 }
 
-#contact-us-form .form-area .cm-form-field {
-  padding: 20px;
-  background: var(--color1);
-  border: 2px solid var(--color1);
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:focus {
   color: var(--white-color);
-}
-
-#contact-us-form .form-area .cm-form-field:focus {
+  background: var(--primary);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:focus:-ms-input-placeholder {
+  color: white;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:focus::-ms-input-placeholder {
+  color: white;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:focus::placeholder {
+  color: white;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input::-webkit-input-placeholder {
+  color: var(--grey-color);
+  font-weight: 600;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input:-ms-input-placeholder {
+  color: var(--grey-color);
+  font-weight: 600;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input::-ms-input-placeholder {
+  color: var(--grey-color);
+  font-weight: 600;
+}
+
+#contact-us-form .form-area .contact-form-input_wrapper .contact-form-input::placeholder {
+  color: var(--grey-color);
+  font-weight: 600;
 }
 
 #contact-page .header__text-wrapper .header__text h1 {
@@ -530,6 +578,23 @@ section#business .section-bg {
   border: 1px solid var(--primary);
   background: none;
   color: var(--primary);
+}
+
+/* Services Page Design */
+/* #services-page{
+
+} */
+#services_section {
+  padding: 4rem 0;
+  background: var(--secondary);
+  position: relative;
+  z-index: 5;
+}
+
+#services_section #sectionTitle {
+  --line-mt: 0px;
+  --text-display: none;
+  margin-bottom: 3rem;
 }
 
 #sectionTitle {
@@ -828,6 +893,20 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
   margin-bottom: 1.2rem;
 }
 
+.faq-card.active .faq-question-label {
+  background: var(--primary-very-light);
+}
+
+.faq-card.active .faq-question-label .collapse-symbol {
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+}
+
+.faq-card.active .faq-question-label .collapse-symbol .line-tow {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .faq-card .faq-question-label {
   border: none;
   padding: 1.2rem 2rem;
@@ -845,12 +924,88 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
   z-index: 1;
 }
 
+.faq-card .faq-question-label .collapse-symbol {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.faq-card .faq-question-label .collapse-symbol .line {
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+.faq-card .faq-question-label .collapse-symbol .line-tow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .faq-card .faq-answer {
   background: var(--white-color);
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .faq-card .faq-answer .faq-answer-body {
   padding: 20px;
   color: var(--primary-very-dark);
+}
+
+/* COMMENT services Card */
+#services-card {
+  --color:var(--white-color);
+  color: var(--color);
+  text-align: center;
+  margin-bottom: 10%;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+#services-card .services-card__thumbnail {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#services-card .services-card__thumbnail img {
+  width: 100%;
+}
+
+#services-card .services-card__details {
+  margin: 10px auto;
+  margin-top: 2rem;
+}
+
+#services-card .animation-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-very-light);
+  left: 0px;
+  z-index: 2;
+  top: 0px;
+  -webkit-clip-path: circle(0% at 100% 100%);
+          clip-path: circle(0% at 100% 100%);
 }
 /*# sourceMappingURL=App.css.map */

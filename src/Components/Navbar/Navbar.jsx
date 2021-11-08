@@ -15,8 +15,8 @@ const Nav = () => {
             text: "Home",
         },
         {
-            path: "/about",
-            text: "About",
+            path: "/faq",
+            text: "FAQ",
         },
         {
             path: "/services",

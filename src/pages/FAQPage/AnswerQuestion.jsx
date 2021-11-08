@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Faqcard from '../../Components/FaqCard/Faqcard';
 import { FaqData } from '../../Data/faqPageData';
 
 const AnswerQuestion = () => {
+
+    const [activeFaq,setActiveFaq] = useState("")
+
     return (
         <section id="Faq-answer-question">
             <div className="container-xxl">
                 <div className="col-12 col-md-10 col-lg-9 col-xl-8 mx-auto">
                     {FaqData.map((data ,index) => (
-                        <Faqcard index data={data} />
+                        <Faqcard activeFaq={activeFaq} setActiveFaq={setActiveFaq} index data={data} />
                     ))}
                 </div>
 

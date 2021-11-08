@@ -9,6 +9,7 @@ $primary: #ff9452;
     --dark-text: black;
     --white-color: white;
     --secondary: #00a8ff;
+    --secondary-very-light: #7fd3ff;
     --dark-overlay-1: #0000005d;
     --lg-heading: 8.8rem;
     --md-heading: 5rem;
@@ -32,21 +33,20 @@ $colors: primary, dark-text, white-color, secondary, dark-overlay-1;
         box-shadow: none !important;
     }
 }
-#cm-cursor{
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        border-radius: 50%;
-        z-index: 5;
-        background: red;
-        transform: translate(-50%,-50%);
-        z-index: 1000;
-        top:0px;
-        left:0px;
-        pointer-events: none;
-        display: none;
-
-    }
+#cm-cursor {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 5;
+    background: red;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    display: none;
+}
 
 p {
     margin-bottom: 0px;
@@ -69,14 +69,32 @@ header {
             display: flex;
             align-items: center;
             color: var(--white-color);
+            position: relative;
             .header__text {
                 width: 100%;
                 h1 {
                     font-size: var(--md-heading);
                     font-weight: 800;
                     text-align: center;
-                    &.text-c-lg{
+                    &.text-c-lg {
                         font-size: var(--lg-heading);
+                    }
+                }
+
+                .scroll-down {
+                    text-align: end;
+                    position: absolute;
+                    right: 10%;
+                    bottom: 20%;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        height: 200px;
+                        background: var(--white-color);
+                        right: -18%;
+                        top: -0%;
                     }
                 }
             }
@@ -293,25 +311,30 @@ contact us page css here
     display: flex;
     justify-content: center;
     align-items: center;
-    .form-area {
-        padding: clamp(20px, 10rem, 5vw);
-        box-sizing: border-box;
-        box-shadow: 10px 10px 38px 10px rgba(0, 0, 0, 0.68);
-        border-radius: 21px;
-        margin: 2rem auto;
-        overflow: hidden;
 
-        .headline {
-            color: var(--color1);
-            margin-top: -90px;
-        }
-        .cm-form-field {
-            padding: 20px;
-            background: var(--color1);
-            border: 2px solid var(--color1);
-            color: var(--white-color);
-            &:focus {
-                box-shadow: none;
+    .form-area {
+        .contact-form-input_wrapper {
+            padding: 10px;
+
+            .contact-form-input {
+                border: none;
+                font-size: 20px;
+                font-weight: 700;
+                padding: 10px;
+                width: 100%;
+                font-style: italic;
+                &:focus {
+                    color: var(--white-color);
+                    background: var(--primary);
+                    box-shadow: none;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+                &::placeholder {
+                    color: var(--grey-color);
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -391,23 +414,21 @@ contact us page css here
     }
 }
 
-
 /* 
 COMMENT
 Business Section 
 */
-section#business{
+section#business {
     padding: 5rem;
     background: var(--primary);
-    ;position: relative;
+    position: relative;
     z-index: 5;
     min-height: 60vh;
     justify-content: center;
     align-items: center;
     display: flex;
 
-    
-    .section-bg{
+    .section-bg {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -417,22 +438,34 @@ section#business{
     }
 }
 
-
-
 /* COMMENT FAQ Page Design */
 
-
-#Faq-answer-question{
+#Faq-answer-question {
     background: var(--primary-very-light);
     position: relative;
     z-index: 5;
-    padding:3rem 0;
+    padding: 3rem 0;
     padding-top: 7rem;
-
 }
-.btn-theme-primary-outline{
+.btn-theme-primary-outline {
     border: 1px solid var(--primary);
     background: none;
     color: var(--primary);
 }
 
+/* Services Page Design */
+/* #services-page{
+
+} */
+
+#services_section {
+    padding: 4rem 0;
+    background: var(--secondary);
+    position: relative;
+    z-index: 5;
+    #sectionTitle {
+        --line-mt: 0px;
+        --text-display: none;
+        margin-bottom: 3rem;
+    }
+}

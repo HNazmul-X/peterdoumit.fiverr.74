@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-const Header = ({children,title,subtitle,titleLg}) => {
+const Header = ({ children, title, subtitle, titleLg }) => {
+    useEffect(function () {
+        const circle = document.querySelector("header .header-animation-circle");
+        const header = document.querySelector("#header-header #header .header__text-wrapper .header__text h1");
 
-    useEffect(function(){
-        const circle = document.querySelector("header .header-animation-circle")
-        
-        window.addEventListener("scroll",()=> {
-            const scrollingToTop = window.scrollY
-            circle.style.cssText = `clip-path:circle(${scrollingToTop/4+10}% at 1% 99%)`
-            console.log(scrollingToTop);
-        })
-       
-
-    },[])
+        window.addEventListener("scroll", () => {
+            const scrollingToTop = window.scrollY;
+            circle.style.cssText = `clip-path:circle(${scrollingToTop / 4 + 10}% at 1% 99%)`;
+            header.style.cssText = `transform:translateY(-${(0.9 * scrollingToTop) / 3}px)`;
+        });
+    }, []);
 
     return (
         <header id="header-header">
@@ -20,8 +18,9 @@ const Header = ({children,title,subtitle,titleLg}) => {
                 <div className="video-container"></div>
                 <div className="header__text-wrapper container-xxl">
                     <div className="header__text">
-                        <h1 className={`${titleLg?"text-c-lg":""}`}>{title}</h1>
+                        <h1 className={`${titleLg ? "text-c-lg" : ""}`}>{title}</h1>
                         <h4 className="mt-4">{subtitle && subtitle}</h4>
+                        <div className="scroll-down">Scroll Down</div>
                     </div>
                 </div>
             </section>
