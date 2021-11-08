@@ -1,39 +1,47 @@
 import React from "react";
+import './contactUs.css';
 
 const ContactUsForm1 = () => {
     return (
         <section id="contact-us-form">
-            <div className="container-xxl">
-                <div className="row">
-                    <div className="col-md-6 text-light px-1 px-md-2 px-lg-4">
-                        <h1 className="display-1 fw-bolder text-light">Say Hello</h1>
-                        <p className="pt-2 fs-5">
-                            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, assumenda. consectetur adipisicing elit. Labore, autem?
-                        </p>
+                        <section class="contact-form-section">
+                    <div class="container">
+                        <div class="container px-5">    
+                            <div class="the-form">
+                                <div class="title">
+                                    <h2>SAY HELLO!  </h2>
+                                </div>
+                                <div class="after"></div>
+                                <div class="description">
+                                    <p>Introduce yourself and your business <br /> and we'll get back to you shortly.</p>
+                                </div>
+                                <form action="hello@doumitdigital.com.au">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" />
+                                                <label for="floatingInput">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="floatingPassword" placeholder="Your Email" />
+                                                <label for="floatingPassword">Your Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name=""  cols="30" rows="6"></textarea>
+                                        <label for="floatingTextarea2">Comments</label>
+                                    </div>
+                                    <div class="submit">
+                                        <input type="submit" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-
-                    <div className="col-md-6 text-light px-1 px-md-2 form-area px-lg-4">
-                        <div className="contact-form-input_wrapper">
-                            <input placeholder={"Enter Your Email"} type="email" name="" id="" className="form-control contact-form-input" />
-                        </div>
-                        <div className="contact-form-input_wrapper">
-                            <input placeholder={"Enter Your Name"} type="email" name="" id="" className="form-control contact-form-input" />
-                        </div>
-                        <div className="contact-form-input_wrapper">
-                            <input placeholder={"Enter Your Mobile Number"} type="email" name="" id="" className="form-control contact-form-input" />
-                        </div>
-                        <div className="contact-form-input_wrapper">
-                            <input placeholder={"Enter Your Organization Name"} type="email" name="" id="" className="form-control contact-form-input" />
-                        </div>
-                        <div className="contact-form-input_wrapper">
-                            <textarea name="massage" id="massage" rows="7" placeholder="Write Your massage" className="form-control contact-form-input"></textarea>
-                        </div>
-                        <div className="text-center">
-                            <button className="btn mt-3 btn-outline-light border-3 fs-5 col-10 col-md-8 col-lg-6">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </section>
         </section>
     );
 };

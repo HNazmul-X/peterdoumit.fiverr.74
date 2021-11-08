@@ -322,47 +322,47 @@ COMMENT
 contact us page css here
 */
 
-#contact-us-form {
-    min-height: 100vh;
-    width: 100%;
-    background: url("../Images/contactus-page-form-background.jpg") no-repeat center;
-    background-color: rgba(0, 0, 0, 0.253);
-    background-blend-mode: soft-light;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// #contact-us-form {
+//     min-height: 100vh;
+//     width: 100%;
+//     background: url("../Images/contactus-page-form-background.jpg") no-repeat center;
+//     background-color: rgba(0, 0, 0, 0.253);
+//     background-blend-mode: soft-light;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     position: relative;
+//     z-index: 5;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    .form-area {
-        .contact-form-input_wrapper {
-            padding: 10px;
+//     .form-area {
+//         .contact-form-input_wrapper {
+//             padding: 10px;
 
-            .contact-form-input {
-                border: none;
-                font-size: 20px;
-                font-weight: 700;
-                padding: 10px;
-                width: 100%;
-                font-style: italic;
-                &:focus {
-                    color: var(--white-color);
-                    background: var(--primary);
-                    box-shadow: none;
-                    &::placeholder {
-                        color: white;
-                    }
-                }
-                &::placeholder {
-                    color: var(--grey-color);
-                    font-weight: 600;
-                }
-            }
-        }
-    }
-}
+//             .contact-form-input {
+//                 border: none;
+//                 font-size: 20px;
+//                 font-weight: 700;
+//                 padding: 10px;
+//                 width: 100%;
+//                 font-style: italic;
+//                 &:focus {
+//                     color: var(--white-color);
+//                     background: var(--primary);
+//                     box-shadow: none;
+//                     &::placeholder {
+//                         color: white;
+//                     }
+//                 }
+//                 &::placeholder {
+//                     color: var(--grey-color);
+//                     font-weight: 600;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 #contact-page {
     .header__text-wrapper {
