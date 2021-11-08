@@ -19,7 +19,7 @@ const Header = ({ children, title, subtitle, titleLg }) => {
                 <div className="header__text-wrapper container-xxl">
                     <div className="header__text">
                         <h1 className={`${titleLg ? "text-c-lg" : ""}`}>{title}</h1>
-                        <h4 className="mt-4">{subtitle && subtitle}</h4>
+                        <h4 claspsName="mt-4">{subtitle && subtitle}</h4>
                         <div className="scroll-down">Scroll Down</div>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+@import "vars";
 #sectionTitle {
     --color: var(--white-color);
     --padding: 40px 0px;
@@ -6,7 +7,7 @@
     color: var(--color);
     padding: var(--padding);
     h1 {
-        font-size: 70px;
+        font-size: var(--md-heading);
         font-weight: 700;
     }
     .sectionTitle__text {
@@ -20,6 +21,16 @@
         width: 40%;
         height: 10px;
         margin-top: var(--line-mt);
+    }
+
+    @media screen and (max-width:$md-breakpoint) {
+        .sectionTitle__text{
+            font-size: 16px;;
+            margin: 10px 0;
+        }
+
+        --line-mt:10px;
+        
     }
 }
 
@@ -310,22 +321,36 @@ footer#footer {
     text-align: center;
     margin-bottom: 10%;
     padding:1.5rem;
-    overflow: hidden;
     position: relative;
     border-radius: 20px;
     z-index: 1;
+    cursor: pointer;
     .services-card__thumbnail{
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
+        &:hover{
+            img{
+                transform: scale(1.20);
+            }
+        }
         img{
             width: 100%;
+            transition: 0.5s;
 
         }
     }
     .services-card__details{
         margin: 10px auto;
         margin-top: 2rem;
+        h4{
+            font-size: 30px;;
+        }
+        p{
+            font-size: 14px;
+        }
+
+
     }
     .animation-circle{
         position: absolute
@@ -337,5 +362,21 @@ footer#footer {
         z-index: 2;
         top:0px;
         clip-path: circle(0% at 100% 100%);
+    }
+}
+
+.my-aos-animation{
+    &.fade-up{
+        transition: 0.8s;
+        opacity: 0;
+        transform: translateY(300px);
+        &.scroll-reversed{
+            transform: translateY(-100px) !important;
+            opacity: 0;
+        }
+        &.scrolled{
+            transform: translate(0);
+            opacity: 1;
+        }
     }
 }

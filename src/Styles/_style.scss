@@ -1,5 +1,4 @@
-$primary: #ff9452;
-
+@import "vars";
 :root {
     --primary: #ff9452;
     --primary-light: #fec9a8;
@@ -15,6 +14,22 @@ $primary: #ff9452;
     --md-heading: 5rem;
     --lg-shadow: 3px 6px 51px 5px rgba(0, 0, 0, 0.08);
     border-radius: 22px;
+}
+
+@media screen and (max-width: $md-breakpoint) {
+    :root {
+        --md-heading: 3rem;
+        --lg-heading: 4rem;
+    }
+    .fs-5 {
+        font-size: 20px !important;
+    }
+}
+@media screen and (max-width: $sm-breakpoint) {
+    :root {
+        --md-heading: 2.5rem;
+        --lg-heading: 3rem;
+    }
 }
 
 $colors: primary, dark-text, white-color, secondary, dark-overlay-1;
@@ -54,6 +69,7 @@ p {
 
 header {
     position: relative;
+    overflow: hidden;
     #header {
         width: 100%;
         height: 100%;
@@ -122,6 +138,14 @@ header {
         z-index: 5;
         top: 10vh;
         left: 0px;
+    }
+
+    @media screen and (max-width:$md-breakpoint) {
+        #header-svg{
+            width: 50px;;
+            display: none;
+        }
+        
     }
 }
 @media screen and (min-width: 992px) {
@@ -467,5 +491,8 @@ section#business {
         --line-mt: 0px;
         --text-display: none;
         margin-bottom: 3rem;
+    }
+    .right-site{
+        margin-top: 12rem;
     }
 }

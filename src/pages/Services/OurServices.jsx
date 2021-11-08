@@ -13,7 +13,7 @@ const ServicesSection = () => {
                             <ServicesCard serial={index} />
                         ))}
                     </div>
-                    {<div className="right-site col-12 col-md-7 col-lg-5 mx-auto mt-0 mt-lg-5 pt-0 pt-lg-5">
+                    {<div className="right-site col-12 col-md-7 col-lg-5 mx-auto">
                         {[...new Array(3)].map((item,index) => (
                             <ServicesCard serial={index} />
                         ))}

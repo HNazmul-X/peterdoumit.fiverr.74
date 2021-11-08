@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 
 const ServicesCard = ({serial}) => {
-    const animationCircle = useRef(null);
     const servicesCard = useRef(null);
 
     // useEffect(() => {
@@ -12,7 +11,7 @@ const ServicesCard = ({serial}) => {
     // }, [serial]);
 
     return (
-        <div ref={servicesCard} id="services-card">
+        <div ref={servicesCard} id="services-card" className="my-aos-animation fade-up">
             <div className="services-card__thumbnail">
                 <img src="https://www.creative-tim.com/blog/content/images/wordpress/2019/07/opt_pk_react_thumbnail.jpg" alt="" />
             </div>
@@ -24,7 +23,7 @@ const ServicesCard = ({serial}) => {
                 </div>
             </div>
 
-            <div ref={animationCircle} className="animation-circle"></div>
+            <div className="circle"></div>
         </div>
     );
 };

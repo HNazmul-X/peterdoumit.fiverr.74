@@ -1,20 +1,23 @@
-// try{
-//     window.addEventListener("load", () => {
-//         const cm_cursor = document.getElementById("cm-cursor");
-//         const business_section = document.getElementById("business");
+try{
+    window.addEventListener("load", async () => {
+       window.addEventListener("scroll", async (e)=> {
+           const animation_box = document.querySelectorAll(".my-aos-animation");
+           animation_box.forEach((element,index) => {
+               const animation_enter_line = element.getAttribute("data-aos-enterline") || 1.25;
+               const animation_area = window.innerHeight/Number(animation_enter_line) || document.rootElement.clientHeight
+               const {top} = element.getBoundingClientRect()
+               console.log(index,top);
+               if(animation_area>top){
+                   console.log(index,true)
+                   element.classList.add("scrolled")
+               } 
+                else {
+                   element.classList.remove("scrolled")
+               }
+           });
+       })
+    })
 
-//         window.addEventListener("mousemove", function (e) {
-//             console.log(business_section);
-//             if (cm_cursor) {
-//                 cm_cursor.style.cssText = `top:${e.pageY}px;left:${e.pageX}px`;
-//             }
-//         });
-
-//         business_section.addEventListener("mousemove", (e) => {
-//             cm_cursor.style.cssText = `top:${e.pageY}px;left:${e.pageX}px;display:block`;
-//         });
-//     })
-
-// } catch(e){
-//     console.log(e);
-// }
+} catch(e){
+    console.log(e);
+}
