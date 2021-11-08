@@ -5,25 +5,35 @@ import WEBDISPLAY_ICON from "../Images/icon/webdisplay.svg"
 import VIDEO_ICON from "../Images/icon/video.svg"
 
 
-export const ServicesIconAndTextData = [ 
+export const ServicesIconAndTextData = [
     {
         icon: BULB_ICON,
-        text: "Creative Direction",
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
     },
     {
         icon: SHEILD_ICON,
-        text: "Creative Direction",
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
     },
     {
         icon: DESIGN_TOOLS_ICON,
-        text: "Creative Direction",
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
     },
     {
         icon: WEBDISPLAY_ICON,
-        text: "Creative Direction",
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
     },
     {
-        icon:VIDEO_ICON,
-        text: "Creative Direction",
+        icon: VIDEO_ICON,
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
+    },
+    {
+        icon: VIDEO_ICON,
+        title: "Creative Direction",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aperiam.",
     },
 ];

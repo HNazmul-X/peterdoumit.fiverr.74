@@ -1,16 +1,17 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
-import FeaturedWork from "./FeaturedWork";
+import Business from "./Business";
+import Testimonials from "./Testomonitals";
 import WhatWeDo from "./WhatWeDo";
-import WorkedWith from "./WorkedWith";
 
 const Home = () => {
     return (
         <>
-            <Header></Header>
+            <Header
+                title="WE BUILD UNIQUE DIGITAL INSTRUMENTS FOR YOUR BUSINESS."></Header>
             <WhatWeDo></WhatWeDo>
-            <FeaturedWork/>
-            <WorkedWith/>
+            <Testimonials/>
+            <Business/>
         </>
     );
 };

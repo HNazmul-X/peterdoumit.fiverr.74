@@ -3,6 +3,7 @@ import Header from "./Components/Navbar/Navbar";
 import "./Styles/App.css"
 import MainRouter from "./router/Router"
 import Footer from "./Components/Footer/Footer";
+import "./utility/utility"
 
 function App() {
     return (

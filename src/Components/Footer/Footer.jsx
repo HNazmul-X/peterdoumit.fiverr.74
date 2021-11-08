@@ -6,7 +6,6 @@ const Footer = () => {
         const footerStaticUpper = document.querySelector("#footer .footer-static-upper");
         const footerParallax = document.querySelector("#footer .footer-fixed-parallax")
         window.addEventListener("scroll",function(e){
-            console.clear()
             const windowHeight = window.innerHeight
             const {top:elementfromtop} = footerStaticUpper.getBoundingClientRect()
             if((windowHeight - footerStaticUpper.clientHeight)>elementfromtop){
