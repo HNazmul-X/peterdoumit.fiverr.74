@@ -4,8 +4,6 @@ import ContactUsForm1 from './ContactUsForm';
 
 const Contact = () => {
 
-    
-
     return (
         <main id="contact-page">
             <Header title="Contact Us"/>

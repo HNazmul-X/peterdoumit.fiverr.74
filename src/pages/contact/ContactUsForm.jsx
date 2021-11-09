@@ -1,15 +1,14 @@
 import React from "react";
-import './contactUs.css';
 
 const ContactUsForm1 = () => {
     return (
         <section id="contact-us-form">
-                        <section class="contact-form-section">
+            <section class="contact-form-section">
                     <div class="container">
                         <div class="container px-5">    
                             <div class="the-form">
                                 <div class="title">
-                                    <h2>SAY HELLO!  </h2>
+                                    <h2>SAY HELLO! </h2>
                                 </div>
                                 <div class="after"></div>
                                 <div class="description">

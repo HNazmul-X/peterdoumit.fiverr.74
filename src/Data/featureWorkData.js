@@ -1,4 +1,5 @@
-import APP_D_IMG from "../Images/Homepage-FeaturesArtboard-26-1.jpg"
+import APP_D_IMG from "../Images/Homepage-FeaturesArtboard-26-1.jpg";
+
 
 
 export const featureWorkCardData = [

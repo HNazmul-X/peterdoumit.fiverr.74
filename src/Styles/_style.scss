@@ -7,7 +7,8 @@
     --grey-color: #c1c1c1;
     --dark-text: black;
     --white-color: white;
-    --secondary: #00a8ff;
+    // --secondary: #00a8ff;
+    --secondary: #71819A;
     --secondary-very-light: #7fd3ff;
     --dark-overlay-1: #0000005d;
     --lg-heading: 8.8rem;
@@ -322,47 +323,10 @@ COMMENT
 contact us page css here
 */
 
-// #contact-us-form {
-//     min-height: 100vh;
-//     width: 100%;
-//     background: url("../Images/contactus-page-form-background.jpg") no-repeat center;
-//     background-color: rgba(0, 0, 0, 0.253);
-//     background-blend-mode: soft-light;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     position: relative;
-//     z-index: 5;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+#contact-us-form {
 
-//     .form-area {
-//         .contact-form-input_wrapper {
-//             padding: 10px;
-
-//             .contact-form-input {
-//                 border: none;
-//                 font-size: 20px;
-//                 font-weight: 700;
-//                 padding: 10px;
-//                 width: 100%;
-//                 font-style: italic;
-//                 &:focus {
-//                     color: var(--white-color);
-//                     background: var(--primary);
-//                     box-shadow: none;
-//                     &::placeholder {
-//                         color: white;
-//                     }
-//                 }
-//                 &::placeholder {
-//                     color: var(--grey-color);
-//                     font-weight: 600;
-//                 }
-//             }
-//         }
-//     }
-// }
+    
+}
 
 #contact-page {
     .header__text-wrapper {
@@ -465,7 +429,7 @@ section#business {
 /* COMMENT FAQ Page Design */
 
 #Faq-answer-question {
-    background: var(--primary-very-light);
+    background: var(--primary-very-light);   
     position: relative;
     z-index: 5;
     padding: 3rem 0;
@@ -478,9 +442,9 @@ section#business {
 }
 
 /* Services Page Design */
-/* #services-page{
-
-} */
+//  #services-page{
+//     scroll-behavior: smooth;
+// } 
 
 #services_section {
     padding: 4rem 0;

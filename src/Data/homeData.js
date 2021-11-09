@@ -1,7 +1,16 @@
-import BULB_ICON from "../Images/icon/bulb.svg"
-import SHEILD_ICON from "../Images/icon/sheild.svg"
-import DESIGN_TOOLS_ICON from "../Images/icon/designtools.svg"
-import WEBDISPLAY_ICON from "../Images/icon/webdisplay.svg"
+import BULB_ICON from "../Images/icon/bulb.svg";
+import SHEILD_ICON from "../Images/icon/sheild.svg";
+import DESIGN_TOOLS_ICON from "../Images/icon/designtools.svg";
+import WEBDISPLAY_ICON from "../Images/icon/webdisplay.svg";
+import APP_D_IMG from "../Images/Homepage-FeaturesArtboard-26-1.jpg";
+import iamge_1 from '../Images/services_image/image_1.jpg';
+import iamge_2 from '../Images/services_image/image_2.jpg';
+import iamge_3 from '../Images/services_image/image_3.jpg';
+import iamge_4 from '../Images/services_image/image_4.jpg';
+import iamge_5 from '../Images/services_image/image_5.jpg';
+import iamge_6 from '../Images/services_image/image_6.jpg';
+
+
 // import VIDEO_ICON from "../Images/icon/video.svg"
 
 
@@ -47,4 +56,52 @@ export const TestimonialData =  [
         review: '“The guys at Doumit Digital have helped me scale my firm immensely. We couldn’t believe how effective the digital world could be for our already established business. Peter drafted a quite impressive wireframe and the final product blew us away. From the development stage to branding to marketing, their skills precisely met our needs. Exactly what we’ve been looking for.”',
         image: 'https://i1.wp.com/peterdoumit.com/wp-content/uploads/2021/06/portrait-of-young-man-73SXPHY.jpg?fit=1800%2C1201&ssl=1'
     }
+]
+
+
+
+
+export const serviePageDataFirst = [
+    {
+        image:iamge_1,
+        title:"Web Develpment",
+        description:"We will create an impactful website through our carefully crafted process. Establish a strong digital presence with our extraordinary and original frameworks."
+
+    },
+    {
+        image:iamge_2,
+        title:"Search Engine Optimisation",
+        description:"We provide businesses with more opportunities on search engines through proven white hat methods. We’ll help you boost your visibility with a pragmatic approach."
+
+    },
+    {
+        image:iamge_3,
+        title:"Web Assessment",
+        description:"Your website is outdated, it’s time for a change! We will identify the strengths and weaknesses of your existing website, and advise you of the best way forward"
+
+    }
+
+]
+
+
+
+export const serviePageDataSecond = [
+    {
+        image:iamge_4,
+        title:"Advertisement Management",
+        description:"Someone from somewhere built your website sometime ago, and the time has finally come to take a second look at your main digital platform."
+
+    },
+    {
+        image:iamge_5,
+        title:"Social Medias Management",
+        description:"Let us establish and cultivate an active online community around your business, product or profile. We tailor story boards, ads and campaigns to your unique business model."
+
+    },
+    {
+        image:iamge_6,
+        title:"Brand Design Strategy",
+        description:"We find brilliant ways to improve your business’ visual communication. Our design experts will establish a distinct brand image for your business."
+
+    },
 ]
