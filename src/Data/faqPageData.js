@@ -1,28 +1,34 @@
 export const FaqData = [
     {
-        question: "Title For Frequently Asked Question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, temporibus quae! Est quo minima possimus quia a cum nesciunt nulla et doloremque laudantium atque temporibus molestias fuga fugit iusto voluptas perspiciatis ab eligendi reiciendis deleniti nisi delectus, accusamus qui rem? Ea debitis modi eligendi aut quaerat unde assumenda voluptatem dignissimos, totam quis cum voluptate magnam officia aliquam quod rem officiis veritatis reiciendis quam velit sapiente molestiae. Sint doloremque ratione quas",
+        question: "What size budgets do you typically work with?",
+        answer: 
+            "Under 5k,  5-10k,  10-15k, 15-20k",
         id: "vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp",
     },
     {
-        question: "Title For Frequently Asked Question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, temporibus quae! Est quo minima possimus quia a cum nesciunt nulla et doloremque laudantium atque temporibus molestias fuga fugit iusto voluptas perspiciatis ab eligendi reiciendis deleniti nisi delectus, accusamus qui rem? Ea debitis modi eligendi aut quaerat unde assumenda voluptatem dignissimos, totam quis cum voluptate magnam officia aliquam quod rem officiis veritatis reiciendis quam velit sapiente molestiae. Sint doloremque ratione quas",
+        question: "When do we get started?",
+        answer: "Right away! Once your enquiry is received, our team will reach out to arrange a quick chat. After our discovery call we will send you a scope of work, get your approval, and begin designing.",
         id: "Zt1yodBx1UcyiePMSkWnU4hPqhw",
     },
     {
-        question: "Title For Frequently Asked Question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, temporibus quae! Est quo minima possimus quia a cum nesciunt nulla et doloremque laudantium atque temporibus molestias fuga fugit iusto voluptas perspiciatis ab eligendi reiciendis deleniti nisi delectus, accusamus qui rem? Ea debitis modi eligendi aut quaerat unde assumenda voluptatem dignissimos, totam quis cum voluptate magnam officia aliquam quod rem officiis veritatis reiciendis quam velit sapiente molestiae. Sint doloremque ratione quas",
+        question: "How long does a project take?",
+        answer: "This will heavily depend on the scope of work. Want to see how long your project will take? Let’s schedule a free consultation to explore your project in detail and establish a timeframe.",
         id: "HV1Cm0Q3ZrpCR93tkWOYiuYIgLxZX",
     },
     {
-        question: "Title For Frequently Asked Question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, temporibus quae! Est quo minima possimus quia a cum nesciunt nulla et doloremque laudantium atque temporibus molestias fuga fugit iusto voluptas perspiciatis ab eligendi reiciendis deleniti nisi delectus, accusamus qui rem? Ea debitis modi eligendi aut quaerat unde assumenda voluptatem dignissimos, totam quis cum voluptate magnam officia aliquam quod rem officiis veritatis reiciendis quam velit sapiente molestiae. Sint doloremque ratione quas",
+        question: "How do I figure out what my project will cost?",
+        answer: "The best way for our team to understand the requirements of your website and the final price, is to provide you with a free consultation via the CONTACT US page or our email: hello@doumitdigital.com.au",
         id: "SIoW7HVWIdmy1cB7s3ki",
     },
     {
-        question: "Title For Frequently Asked Question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, temporibus quae! Est quo minima possimus quia a cum nesciunt nulla et doloremque laudantium atque temporibus molestias fuga fugit iusto voluptas perspiciatis ab eligendi reiciendis deleniti nisi delectus, accusamus qui rem? Ea debitis modi eligendi aut quaerat unde assumenda voluptatem dignissimos, totam quis cum voluptate magnam officia aliquam quod rem officiis veritatis reiciendis quam velit sapiente molestiae. Sint doloremque ratione quas",
+        question: "WHO WILL BE WORKING ON MY WEBSITE?",
+        answer: "In 2022, we are celebrating 15 years of combined experience between our experts. With your own Client Manager, Director of Digital Experience, Designer, Developer and Project Manager, you can rest assured that your projects are in capable hands",
         id: "N2jKYVxZv0aNCsxTSVCiK72DTiTY",
+    },
+    {
+        question: "We want to keep our logo and most branding assets the same, but we need to improve our advertising and modernise the website. Can you help?",
+        answer: "Yes, we’re comfortable with maintaining your current frameworks and working with and around them. We make recommendations for improvements, and develop your business without completely redesigning or compromising your brand.",
+        id: "N2jKYVxZv0aNCsYTSVCiK72DTiTZ",
     }
 ];
 
