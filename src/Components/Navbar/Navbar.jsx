@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import NAV_LOGO  from "../../Images/nav-logo.png"
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     const [isIconClicked, setIsIconClicked] = useState(false);
@@ -24,7 +26,7 @@ const Nav = () => {
         },
         {
             path: "/contact",
-            text: "Contact",
+            text: "Contact Us",
         },
     ];
     return (
@@ -32,7 +34,7 @@ const Nav = () => {
             <div className="container-xxl">
                 <div className="content-wrapper">
                     <div className="navbar-brand">
-                        <h1 className="fw-bold">Bright</h1>
+                        <img src={NAV_LOGO} alt="" />
                     </div>
                     <div onClick={() => setIsIconClicked(!isIconClicked)} className={`${isIconClicked ? "clicked" : ""} navbar-icon`}>
                         <div className="icon-line line-1"></div>
@@ -45,9 +47,9 @@ const Nav = () => {
                 <div className="navbar__navbar-items_container container">
                     {routes.map((route) => (
                         <div className="navbar__navbar-items">
-                            <a href={route.path} className="navbar__navbar-link">
+                            <Link to={route.path} onClick={()=> setIsIconClicked(!isIconClicked)}  className="navbar__navbar-link">
                                 <h1>{route.text}</h1>
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

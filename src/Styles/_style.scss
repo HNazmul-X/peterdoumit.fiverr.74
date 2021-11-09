@@ -7,9 +7,8 @@
     --grey-color: #c1c1c1;
     --dark-text: black;
     --white-color: white;
-    // --secondary: #00a8ff;
-    --secondary: #71819A;
-    --secondary-very-light: #7fd3ff;
+    --secondary: #71819a;
+    --secondary-very-light: #526784;
     --dark-overlay-1: #0000005d;
     --lg-heading: 8.8rem;
     --md-heading: 5rem;
@@ -33,7 +32,7 @@
     }
 }
 
-$colors: primary, dark-text, white-color, secondary, dark-overlay-1;
+$colors: primary, primary-very-light, primary-light, dark-text, white-color, secondary, dark-overlay-1;
 @each $color in $colors {
     .theme-#{$color} {
         color: var(--#{$color});
@@ -48,20 +47,6 @@ $colors: primary, dark-text, white-color, secondary, dark-overlay-1;
     &:active {
         box-shadow: none !important;
     }
-}
-#cm-cursor {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    border-radius: 50%;
-    z-index: 5;
-    background: red;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
-    display: none;
 }
 
 p {
@@ -167,6 +152,12 @@ header {
         width: 100%;
         align-items: center;
         justify-content: space-between;
+        .navbar-brand{
+            height: 100px;
+            img{
+                height: 100%;
+            }
+        }
         .navbar-icon {
             cursor: pointer;
             position: relative;
@@ -236,6 +227,33 @@ header {
                     h1 {
                         font-size: var(--md-heading);
                         font-weight: 800;
+                        position: relative;
+                        z-index: 1;
+                        padding: 0px 20px;
+                        transition: 0.5s;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            height: 100%;
+                            display: block;
+                            top: 0px;
+                            right: 0px;
+                            z-index: -1;
+                            background: var(--white-color);
+                            transition: 0.5s ease;
+                        }
+                    }
+
+                    &:hover {
+                        h1 {
+                            &::after {
+                                width: 100%;
+                                left: 0px;
+                                right: auto;
+                            }
+                            color: var(--primary);
+                        }
                     }
                 }
             }
@@ -260,6 +278,12 @@ header {
     background: var(--secondary);
     padding: 30px 0;
     padding-bottom: 10vmin;
+
+    #sectionTitle {
+        --text-display: none;
+        --line-mt: 0px;
+        --line-h: 8px;
+    }
 }
 
 /* COMMENT 
@@ -323,94 +347,63 @@ contact us page css here
 */
 
 #contact-us-form {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.253);
-    background-blend-mode: soft-light;
-    background-attachment: fixed;
+    padding: 5rem 0;
+    background: var(--secondary);
     position: relative;
     z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    $primary: #ff9452;
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    section.contact-form-section{
-        background: $primary;
-        color: #fff;
-        padding: 100px 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        .title{
-            h2{
-                font-weight: bold;
-                font-size: 60px;
-            }
+    text-align: center;
+    #sectionTitle {
+        --line-mt:5px;
+        h1{
+            margin-bottom: 0px;
         }
-        .after{
-            width: 150px;
+        .sectionTitle__text{
+            margin: 10px auto;
+
+        }
+        .line{
             height: 8px;
-            background: #fff;
-            border-radius: 25px;
-        }
-        .description{
-            p{
-                font-size:25px;
-                font-weight: bold;
-                margin-bottom: 50px;
-            }
-        }
-        .the-form{
-            padding: 0px 80px;
-                @media screen and (max-width: 800px){
-                    padding: 0px;
-                }
-            form{
-                color: rgba(255, 255, 255, 0.65);
-                .form-control:focus, .form-control:active{
-                    outline: none;
-                    box-shadow: none;
-                }
-                input,textarea{
-                    transition: 0.8s;
-                    color: #fff;
-                    padding: 20px;
-                    background: rgba(255, 255, 255, 0.2);
-                    border: none;
-                    border-radius: 8px;
-                    height: auto;
-                    font-size: 20px;
-                    font-weight: bold;
-                    &[type="submit"]{
-                        background: none;
-                        margin-top: 20px;
-                        border: 3px solid rgba(255, 255, 255, 0.8);
-                        padding: 15px 80px;
-                        font-weight: bold;
-                        color: rgba(255, 255, 255, 0.8);
-                        &:hover{
-                            color: $primary;
-                            background: #fff;
-                        }
-                    }
-                    &::-webkit-scrollbar{
-                        display: none;
-                    }
-                    &:focus{
-                        // border-color: rgba(255, 255, 255, 0.6);
-                        border-bottom: 5px solid rgba(255, 255, 255, 0.6);
-                    }
-                    
-                }
-            }
         }
     }
 
-    
+    .form-area{
+        .cm-input-field{
+            border: none;
+            padding: 15px;;
+            display: block;
+            width: 100%;
+            font-size: 1.2rem;
+            background: var(--secondary-very-light);
+            color:var(--white-color);
+            border-radius: 5px;
+
+            &::placeholder{
+                color:var(--secondary);
+                color:rgba(255, 255, 255, 0.452);
+            }
+
+
+
+            &:focus{
+                outline: none;
+            }
+        }
+        button[type="submit"]{
+            border: none;
+            background: none;
+            font-size: 1.3rem;
+            width: 250px;
+            border: 3px solid var(--secondary-very-light);
+            padding: 10px;
+            color:var(--secondary-very-light);
+            transition: 0.2s;
+
+            &:hover{
+                background: var(--secondary-very-light);
+                color:var(--white-color);
+            }
+        }
+    }
 }
 
 #contact-page {
@@ -429,19 +422,27 @@ contact us page css here
     z-index: 5;
     background: var(--primary-very-light);
     padding: 1rem 0;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
 
     #sectionTitle {
         --color: var(--primary);
-        --text-display: none;
         --line-mt: 10px;
         margin-bottom: 2.5rem;
+        text-align: center;
+        h1 {
+            margin-bottom: 0px;
+        }
+        .sectionTitle__text {
+            margin: auto;
+            margin-bottom: 10px;
+        }
     }
 
     .slick-slider {
         .slick-slide.slick-active {
             div#testimonials-card {
                 div.testimonials-card__container {
+                    border-radius: 10px;
                     div.testimonials-card__review-text {
                         p {
                             transform: translate(0);
@@ -458,7 +459,7 @@ contact us page css here
                         transform: translate(0);
                         opacity: 1;
                         .profile {
-                            clip-path: circle(70% at 50%);
+                            border-radius: 0%;
                         }
                     }
                 }
@@ -474,7 +475,7 @@ contact us page css here
             align-items: center;
             z-index: 5;
             &::before {
-                font-size: 1.5rem !important;
+                font-size: 1.5rem;
                 color: var(--white-color);
             }
             &.slick-prev {
@@ -482,6 +483,26 @@ contact us page css here
             }
             &.slick-next {
                 right: 70px;
+            }
+        }
+        @media screen and (max-width:700px) {
+            .slick-arrow{
+                background: none;
+                height: auto;
+                width: auto;
+                top:40%;
+
+                &::before{
+                    color:var(--primary);
+                    font-size: 2rem;;
+                }
+
+                &.slick-prev{
+                    left: 10px;;
+                }
+                &.slick-next{
+                    right: 10px;;
+                }
             }
         }
     }
@@ -492,7 +513,7 @@ COMMENT
 Business Section 
 */
 section#business {
-    padding: 5rem;
+    padding: 5rem 0;
     background: var(--primary);
     position: relative;
     z-index: 5;
@@ -501,6 +522,16 @@ section#business {
     align-items: center;
     display: flex;
 
+    &::after{
+        content: '';
+        background: rgba(0, 0, 0, 0.397);
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top:0px;
+    }
     .section-bg {
         position: absolute;
         width: 100%;
@@ -514,7 +545,7 @@ section#business {
 /* COMMENT FAQ Page Design */
 
 #Faq-answer-question {
-    background: var(--primary-very-light);   
+    background: var(--primary-very-light);
     position: relative;
     z-index: 5;
     padding: 3rem 0;
@@ -525,11 +556,6 @@ section#business {
     background: none;
     color: var(--primary);
 }
-
-/* Services Page Design */
-//  #services-page{
-//     scroll-behavior: smooth;
-// } 
 
 #services_section {
     padding: 4rem 0;
@@ -544,63 +570,4 @@ section#business {
     .right-site {
         margin-top: 12rem;
     }
-    // .slider-pages {
-    //     overflow: hidden;
-    //     position: relative;
-    //     height: 100vh;
-    // }
-    
-    // .slider-wrapper{
-    //     position: fixed;
-    //     z-index: 6;
-    //     width: 1140px;
-    //     height: 100vh;
-    // left: 50%;
-    // transform: translateX(-50%);
-    // top: 5vh;
-    // }
-
-    // .slider-page {
-    //     position: absolute;
-    //     top: 0;
-    //     width: 50%;
-    //     height: 100vh;
-    //     transition: transform 1350ms;
-    // }
-
-    // .js-scrolling__page {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    // }
-
-    // .js-scrolling__page {
-    //     transform: translateY(-100%);
-    //     transition: 0.4s;
-    //     &.js-scrolling--active {
-    //         transform: translateY(0);
-    //     }
-    //     .services-card {
-    //         width: 100%;
-    //         height: 100%;
-    //         background: red;
-    //         height: 89vh;
-    //         display: flex;
-    //         font-size: 100px;
-    //         align-items: center;
-    //         justify-content: center;
-    //         color: white;
-    //     }
-    //     &.js-scrolling__page-2 {
-    //         .services-card {
-    //             background: blue;
-    //         }
-    //     }
-    //     &.js-scrolling__page-3 {
-    //         .services-card {
-    //             background: purple;
-    //         }
-    //     }
-    // }
 }

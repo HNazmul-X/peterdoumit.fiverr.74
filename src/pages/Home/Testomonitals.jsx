@@ -13,23 +13,20 @@ const Testomonitals = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay:true,
     };
     return (
         <section id="testimonials">
             <div className="container-xxl">
-                <span style={{textAlign: 'center', fontWeight: '600', color: 'rgba(0, 0, 0, 0.6)', display: 'block', marginBottom: '-30px', marginTop: '30px'}}><b>TESTIMONIALS</b></span>
-            <SectionTitle title="HERE'S WHAT OUR CLIENTS HAVE TO SAY ABOUT US.">What Our Client Says</SectionTitle>
+                <SectionTitle title="Testimonials.">HERE'S WHAT OUR CLIENTS HAVE TO SAY ABOUT US.</SectionTitle>
                 <Slider {...settings}>
-
                     {/* {[...new Array(5)].map((data) => (
                         <TestimonialsCard />
                     ))} */}
 
-                    {
-                        TestimonialData.map(el => <TestimonialsCard data={el} />)
-                    }
-
-
+                    {TestimonialData.map((el) => (
+                        <TestimonialsCard data={el} />
+                    ))}
                 </Slider>
             </div>
         </section>

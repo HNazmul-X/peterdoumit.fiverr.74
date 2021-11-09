@@ -19,7 +19,7 @@ const Faqcard = ({ data, index, activeFaq, setActiveFaq }) => {
         <div onClick={() => faqActivation(id)} className={`${isActive && activeFaq === id ? "active" : ""} faq-card`}>
             <button className="faq-question-label" type="button">
                 <div className="d-flex justify-content-between align-items-center">
-                    <div className="">{question}</div>
+                    <div className="">{question.toUpperCase()}</div>
                     <div className="flex-shrink-0 collapse-symbol">
                         <div className="line line-one"></div>
                         <div className="line line-tow"></div>

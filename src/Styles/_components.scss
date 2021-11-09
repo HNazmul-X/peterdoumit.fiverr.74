@@ -4,6 +4,7 @@
     --padding: 40px 0px;
     --line-mt: 30px;
     --text-display: block;
+    --line-h:10px;
     color: var(--color);
     padding: var(--padding);
     h1 {
@@ -19,8 +20,9 @@
     .line {
         background: var(--color);
         width: 40%;
-        height: 10px;
+        height: var(--line-h);
         margin-top: var(--line-mt);
+        display: inline-block;
     }
 
     @media screen and (max-width:$md-breakpoint) {
@@ -164,24 +166,59 @@ footer#footer {
 }
 
 .what-we-do-card {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1.5rem;
     text-align: center;
     color: var(--white-color);
     margin-bottom: 30px;
     box-shadow: var(--lg-shadow);
     height: 100%;
     margin-bottom: 20px;
+    background: var(--secondary-very-light);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: var(--dark-overlay-1);
+        top:0px;
+        left:0px;
+        clip-path: circle(0% at 0% 100%);
+        transition: 0.8s;
+    }
+    &:hover{
+        &::after{
+            clip-path: circle(150% at 00% 100%);
+        }
+        transform: translateY(-10px);
+    }
     .icon {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
         img {
-            max-width: 100px;
+            height: 80%;
         }
     }
     .text {
         h5 {
             font-weight: 600;
-            font-size: 22px;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 15px;
         }
     }
 }
@@ -237,13 +274,58 @@ footer#footer {
             .profile {
                 margin-bottom: -3.5rem;
                 max-width: 100px;
-                margin-top: 10px;
-                clip-path: circle(50% at 50%);
+                height: 100px;
+                object-fit: cover;
+                border: 3px solid var(--primary);
+                margin-top: 20px;
+                border-radius: 50%;
                 transition-delay: 600ms;
             }
             .title {
                 color: var(--grey-color);
                 font-weight: 600;
+            }
+        }
+    }
+
+    @media screen and (max-width:700px) {
+        .testimonials-card__container{
+            width: 95%;
+            margin-top: 50px;
+            padding: 20px;
+            display: flex;
+            flex-flow: wrap column;
+
+            .testimonials-card__user-info{
+                order: 1;
+                margin-top: 0px;
+                .name{
+                    order: 2;
+
+                }
+                .profile{
+                    margin-bottom: 10px;
+                    order: 1;
+                    width: 70px;
+                    height: 70px;
+                }
+                .title{
+                    order: 3;
+                    font-size: 14px;
+                }
+            }
+            .testimonials-card__review-text{
+                order: 3;
+                padding-top: 5px;
+                p{
+                    font-size: 14px;
+                }
+            }
+            .testimonials-card__review-stars{
+                order: 2;
+                .star{
+                    width: 30px;
+                }
             }
         }
     }

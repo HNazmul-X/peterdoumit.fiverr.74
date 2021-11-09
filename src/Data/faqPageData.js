@@ -1,8 +1,7 @@
 export const FaqData = [
     {
         question: "What size budgets do you typically work with?",
-        answer: 
-            "Under 5k,  5-10k,  10-15k, 15-20k",
+        answer: <span>1. Under 5k <br />2. 5-10k <br />3. 10-15k <br />4. 15-20k </span>,
         id: "vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp",
     },
     {

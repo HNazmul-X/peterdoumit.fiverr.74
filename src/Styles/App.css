@@ -13,8 +13,8 @@
   --grey-color: #c1c1c1;
   --dark-text: black;
   --white-color: white;
-  --secondary: #71819A;
-  --secondary-very-light: #7fd3ff;
+  --secondary: #71819a;
+  --secondary-very-light: #526784;
   --dark-overlay-1: #0000005d;
   --lg-heading: 8.8rem;
   --md-heading: 5rem;
@@ -45,6 +45,22 @@
 
 .theme-bg-primary {
   background: var(--primary);
+}
+
+.theme-primary-very-light {
+  color: var(--primary-very-light);
+}
+
+.theme-bg-primary-very-light {
+  background: var(--primary-very-light);
+}
+
+.theme-primary-light {
+  color: var(--primary-light);
+}
+
+.theme-bg-primary-light {
+  background: var(--primary-light);
 }
 
 .theme-dark-text {
@@ -82,22 +98,6 @@
 [class*="btn"]:focus, [class*="btn"]:active {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-}
-
-#cm-cursor {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 5;
-  background: red;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1000;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  display: none;
 }
 
 p {
@@ -227,6 +227,14 @@ header #header-svg {
           justify-content: space-between;
 }
 
+#navbar .content-wrapper .navbar-brand {
+  height: 100px;
+}
+
+#navbar .content-wrapper .navbar-brand img {
+  height: 100%;
+}
+
 #navbar .content-wrapper .navbar-icon {
   cursor: pointer;
   position: relative;
@@ -316,6 +324,35 @@ header #header-svg {
 #navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link h1 {
   font-size: var(--md-heading);
   font-weight: 800;
+  position: relative;
+  z-index: 1;
+  padding: 0px 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  display: block;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  background: var(--white-color);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link:hover h1 {
+  color: var(--primary);
+}
+
+#navbar .navbar-hidden-items .navbar__navbar-items_container .navbar__navbar-items .navbar__navbar-link:hover h1::after {
+  width: 100%;
+  left: 0px;
+  right: auto;
 }
 
 #navbar .navbar-hidden-items.clicked {
@@ -339,6 +376,12 @@ header #header-svg {
   background: var(--secondary);
   padding: 30px 0;
   padding-bottom: 10vmin;
+}
+
+#what-we-do #sectionTitle {
+  --text-display: none;
+  --line-mt: 0px;
+  --line-h: 8px;
 }
 
 /* COMMENT 
@@ -411,112 +454,79 @@ COMMENT
 contact us page css here
 */
 #contact-us-form {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.253);
-  background-blend-mode: soft-light;
-  background-attachment: fixed;
+  padding: 5rem 0;
+  background: var(--secondary);
   position: relative;
   z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
 }
 
-#contact-us-form * {
-  margin: 0;
-  padding: 0;
+#contact-us-form #sectionTitle {
+  --line-mt:5px;
 }
 
-#contact-us-form section.contact-form-section {
-  background: #ff9452;
-  color: #fff;
-  padding: 100px 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+#contact-us-form #sectionTitle h1 {
+  margin-bottom: 0px;
 }
 
-#contact-us-form section.contact-form-section .title h2 {
-  font-weight: bold;
-  font-size: 60px;
+#contact-us-form #sectionTitle .sectionTitle__text {
+  margin: 10px auto;
 }
 
-#contact-us-form section.contact-form-section .after {
-  width: 150px;
+#contact-us-form #sectionTitle .line {
   height: 8px;
-  background: #fff;
-  border-radius: 25px;
 }
 
-#contact-us-form section.contact-form-section .description p {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-#contact-us-form section.contact-form-section .the-form {
-  padding: 0px 80px;
-}
-
-@media screen and (max-width: 800px) {
-  #contact-us-form section.contact-form-section .the-form {
-    padding: 0px;
-  }
-}
-
-#contact-us-form section.contact-form-section .the-form form {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-#contact-us-form section.contact-form-section .the-form form .form-control:focus, #contact-us-form section.contact-form-section .the-form form .form-control:active {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#contact-us-form section.contact-form-section .the-form form input, #contact-us-form section.contact-form-section .the-form form textarea {
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  color: #fff;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
+#contact-us-form .form-area .cm-input-field {
   border: none;
-  border-radius: 8px;
-  height: auto;
-  font-size: 20px;
-  font-weight: bold;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  background: var(--secondary-very-light);
+  color: var(--white-color);
+  border-radius: 5px;
 }
 
-#contact-us-form section.contact-form-section .the-form form input[type="submit"], #contact-us-form section.contact-form-section .the-form form textarea[type="submit"] {
+#contact-us-form .form-area .cm-input-field::-webkit-input-placeholder {
+  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.452);
+}
+
+#contact-us-form .form-area .cm-input-field:-ms-input-placeholder {
+  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.452);
+}
+
+#contact-us-form .form-area .cm-input-field::-ms-input-placeholder {
+  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.452);
+}
+
+#contact-us-form .form-area .cm-input-field::placeholder {
+  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.452);
+}
+
+#contact-us-form .form-area .cm-input-field:focus {
+  outline: none;
+}
+
+#contact-us-form .form-area button[type="submit"] {
+  border: none;
   background: none;
-  margin-top: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  padding: 15px 80px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  width: 250px;
+  border: 3px solid var(--secondary-very-light);
+  padding: 10px;
+  color: var(--secondary-very-light);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-#contact-us-form section.contact-form-section .the-form form input[type="submit"]:hover, #contact-us-form section.contact-form-section .the-form form textarea[type="submit"]:hover {
-  color: #ff9452;
-  background: #fff;
-}
-
-#contact-us-form section.contact-form-section .the-form form input::-webkit-scrollbar, #contact-us-form section.contact-form-section .the-form form textarea::-webkit-scrollbar {
-  display: none;
-}
-
-#contact-us-form section.contact-form-section .the-form form input:focus, #contact-us-form section.contact-form-section .the-form form textarea:focus {
-  border-bottom: 5px solid rgba(255, 255, 255, 0.6);
+#contact-us-form .form-area button[type="submit"]:hover {
+  background: var(--secondary-very-light);
+  color: var(--white-color);
 }
 
 #contact-page .header__text-wrapper .header__text h1 {
@@ -529,14 +539,27 @@ contact us page css here
   z-index: 5;
   background: var(--primary-very-light);
   padding: 1rem 0;
-  padding-bottom: 4rem;
+  padding-bottom: 7rem;
 }
 
 #testimonials #sectionTitle {
   --color: var(--primary);
-  --text-display: none;
   --line-mt: 10px;
   margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+#testimonials #sectionTitle h1 {
+  margin-bottom: 0px;
+}
+
+#testimonials #sectionTitle .sectionTitle__text {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#testimonials .slick-slider .slick-slide.slick-active div#testimonials-card div.testimonials-card__container {
+  border-radius: 10px;
 }
 
 #testimonials .slick-slider .slick-slide.slick-active div#testimonials-card div.testimonials-card__container div.testimonials-card__review-text p {
@@ -557,8 +580,7 @@ contact us page css here
 }
 
 #testimonials .slick-slider .slick-slide.slick-active div#testimonials-card div.testimonials-card__container div.testimonials-card__user-info .profile {
-  -webkit-clip-path: circle(70% at 50%);
-          clip-path: circle(70% at 50%);
+  border-radius: 0%;
 }
 
 #testimonials .slick-slider .slick-arrow {
@@ -578,7 +600,7 @@ contact us page css here
 }
 
 #testimonials .slick-slider .slick-arrow::before {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
   color: var(--white-color);
 }
 
@@ -590,12 +612,31 @@ contact us page css here
   right: 70px;
 }
 
+@media screen and (max-width: 700px) {
+  #testimonials .slick-slider .slick-arrow {
+    background: none;
+    height: auto;
+    width: auto;
+    top: 40%;
+  }
+  #testimonials .slick-slider .slick-arrow::before {
+    color: var(--primary);
+    font-size: 2rem;
+  }
+  #testimonials .slick-slider .slick-arrow.slick-prev {
+    left: 10px;
+  }
+  #testimonials .slick-slider .slick-arrow.slick-next {
+    right: 10px;
+  }
+}
+
 /* 
 COMMENT
 Business Section 
 */
 section#business {
-  padding: 5rem;
+  padding: 5rem 0;
   background: var(--primary);
   position: relative;
   z-index: 5;
@@ -609,6 +650,17 @@ section#business {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section#business::after {
+  content: '';
+  background: rgba(0, 0, 0, 0.397);
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
 }
 
 section#business .section-bg {
@@ -637,7 +689,6 @@ section#business .section-bg {
   color: var(--primary);
 }
 
-/* Services Page Design */
 #services_section {
   padding: 4rem 0;
   background: var(--secondary);
@@ -660,6 +711,7 @@ section#business .section-bg {
   --padding: 40px 0px;
   --line-mt: 30px;
   --text-display: block;
+  --line-h:10px;
   color: var(--color);
   padding: var(--padding);
 }
@@ -679,8 +731,9 @@ section#business .section-bg {
 #sectionTitle .line {
   background: var(--color);
   width: 40%;
-  height: 10px;
+  height: var(--line-h);
   margin-top: var(--line-mt);
+  display: inline-block;
 }
 
 @media screen and (max-width: 900px) {
@@ -849,7 +902,7 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
 }
 
 .what-we-do-card {
-  padding: 2.5rem 1rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
   color: var(--white-color);
   margin-bottom: 30px;
@@ -857,20 +910,70 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
           box-shadow: var(--lg-shadow);
   height: 100%;
   margin-bottom: 20px;
+  background: var(--secondary-very-light);
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.what-we-do-card::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-overlay-1);
+  top: 0px;
+  left: 0px;
+  -webkit-clip-path: circle(0% at 0% 100%);
+          clip-path: circle(0% at 0% 100%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.what-we-do-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.what-we-do-card:hover::after {
+  -webkit-clip-path: circle(150% at 0% 100%);
+          clip-path: circle(150% at 0% 100%);
 }
 
 .what-we-do-card .icon {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .what-we-do-card .icon img {
-  max-width: 100px;
+  height: 80%;
 }
 
 .what-we-do-card .text h5 {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.what-we-do-card .text p {
+  font-weight: 300;
+  font-size: 15px;
 }
 
 /* COMMENT testimonials Card */
@@ -944,9 +1047,12 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
 #testimonials-card .testimonials-card__container .testimonials-card__user-info .profile {
   margin-bottom: -3.5rem;
   max-width: 100px;
-  margin-top: 10px;
-  -webkit-clip-path: circle(50% at 50%);
-          clip-path: circle(50% at 50%);
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid var(--primary);
+  margin-top: 20px;
+  border-radius: 50%;
   -webkit-transition-delay: 600ms;
           transition-delay: 600ms;
 }
@@ -954,6 +1060,63 @@ footer#footer .footer-fixed-parallax::-webkit-scrollbar {
 #testimonials-card .testimonials-card__container .testimonials-card__user-info .title {
   color: var(--grey-color);
   font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  #testimonials-card .testimonials-card__container {
+    width: 95%;
+    margin-top: 50px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: wrap column;
+            flex-flow: wrap column;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__user-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 0px;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__user-info .name {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__user-info .profile {
+    margin-bottom: 10px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 70px;
+    height: 70px;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__user-info .title {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    font-size: 14px;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__review-text {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    padding-top: 5px;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__review-text p {
+    font-size: 14px;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__review-stars {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #testimonials-card .testimonials-card__container .testimonials-card__review-stars .star {
+    width: 30px;
+  }
 }
 
 /* COMMENT faq Card */

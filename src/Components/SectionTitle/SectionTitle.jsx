@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SectionTitle = ({title,children}) => {
+const SectionTitle = ({title,children,className}) => {
     return (
-        <div id="sectionTitle">
-            <h1 className="text-center">{title}</h1>
+        <div className={className} id="sectionTitle">
+            <h1 className="">{title}</h1>
             <div className="sectionTitle__text">{children}</div>
-            <div className="line mx-auto"></div>
+            <div className="line"></div>
         </div>
     );
 };

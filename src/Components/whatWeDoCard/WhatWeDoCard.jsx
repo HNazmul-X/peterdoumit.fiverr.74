@@ -9,7 +9,7 @@ const WhatWeDoCard = ({data}) => {
             </div>
             <div className="text">
                 <h5>{title}</h5>
-                <p className="mt-2">{desc}</p>
+                <p className="">{desc}</p>
             </div>
             
         </div>

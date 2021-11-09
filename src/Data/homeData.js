@@ -2,7 +2,6 @@ import BULB_ICON from "../Images/icon/bulb.svg";
 import SHEILD_ICON from "../Images/icon/sheild.svg";
 import DESIGN_TOOLS_ICON from "../Images/icon/designtools.svg";
 import WEBDISPLAY_ICON from "../Images/icon/webdisplay.svg";
-import APP_D_IMG from "../Images/Homepage-FeaturesArtboard-26-1.jpg";
 import iamge_1 from '../Images/services_image/image_1.jpg';
 import iamge_2 from '../Images/services_image/image_2.jpg';
 import iamge_3 from '../Images/services_image/image_3.jpg';
@@ -17,22 +16,22 @@ import iamge_6 from '../Images/services_image/image_6.jpg';
 export const ServicesIconAndTextData = [
     {
         icon: BULB_ICON,
-        title: "WEB DEVELOPMENT",
+        title: "Web Development",
         desc: "We help invent your company’s digital presence with extraordinary and impactful frameworks, designed to captivate and engage a prospective demographic.",
     },
     {
         icon: SHEILD_ICON,
-        title: "ADVERTISING",
+        title: "Advertising",
         desc: "Our marketing experts will overlook your interactions with the public through creative and engaging digital media. We create effective campaigns to connect business owners to their consumers through Google Ads, Instagram, Facebook, TikTok, LinkedIn and more.  ",
     },
     {
         icon: DESIGN_TOOLS_ICON,
-        title: "BRANDING",
+        title: "Branding",
         desc: "Realising your company’s vision, and the key elements of your service or product, we carefully craft a brand image that synchronises stunning design with patterns that are recognisable to your clients. ",
     },
     {
         icon: WEBDISPLAY_ICON,
-        title: "REDESIGNS",
+        title: "Redesigns",
         desc: "We supply and integrate high-ranking content substructures and produce comprehensive blueprints using architectural technologies to establish or optimise your company’s UI/UX framework from both the administrator’s and the consumer’s point of view.",
     }
 ];

@@ -7,11 +7,10 @@ import WhatWeDo from "./WhatWeDo";
 const Home = () => {
     return (
         <>
-            <Header
-                title="WE BUILD UNIQUE DIGITAL INSTRUMENTS FOR YOUR BUSINESS."></Header>
+            <Header title={<span>WE BUILD UNIQUE <br /> DIGITAL INSTRUMENTS <br /> FOR YOUR BUSINESS.</span>}></Header>
             <WhatWeDo></WhatWeDo>
-            <Testimonials/>
-            <Business/>
+            <Testimonials />
+            <Business />
         </>
     );
 };
