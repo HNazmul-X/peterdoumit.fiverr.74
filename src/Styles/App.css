@@ -410,6 +410,115 @@ header #header-svg {
 COMMENT
 contact us page css here
 */
+#contact-us-form {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.253);
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-us-form * {
+  margin: 0;
+  padding: 0;
+}
+
+#contact-us-form section.contact-form-section {
+  background: #ff9452;
+  color: #fff;
+  padding: 100px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact-us-form section.contact-form-section .title h2 {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+#contact-us-form section.contact-form-section .after {
+  width: 150px;
+  height: 8px;
+  background: #fff;
+  border-radius: 25px;
+}
+
+#contact-us-form section.contact-form-section .description p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+#contact-us-form section.contact-form-section .the-form {
+  padding: 0px 80px;
+}
+
+@media screen and (max-width: 800px) {
+  #contact-us-form section.contact-form-section .the-form {
+    padding: 0px;
+  }
+}
+
+#contact-us-form section.contact-form-section .the-form form {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#contact-us-form section.contact-form-section .the-form form .form-control:focus, #contact-us-form section.contact-form-section .the-form form .form-control:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#contact-us-form section.contact-form-section .the-form form input, #contact-us-form section.contact-form-section .the-form form textarea {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  color: #fff;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  height: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#contact-us-form section.contact-form-section .the-form form input[type="submit"], #contact-us-form section.contact-form-section .the-form form textarea[type="submit"] {
+  background: none;
+  margin-top: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  padding: 15px 80px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-us-form section.contact-form-section .the-form form input[type="submit"]:hover, #contact-us-form section.contact-form-section .the-form form textarea[type="submit"]:hover {
+  color: #ff9452;
+  background: #fff;
+}
+
+#contact-us-form section.contact-form-section .the-form form input::-webkit-scrollbar, #contact-us-form section.contact-form-section .the-form form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#contact-us-form section.contact-form-section .the-form form input:focus, #contact-us-form section.contact-form-section .the-form form textarea:focus {
+  border-bottom: 5px solid rgba(255, 255, 255, 0.6);
+}
+
 #contact-page .header__text-wrapper .header__text h1 {
   font-size: var(--lg-heading) !important;
 }
