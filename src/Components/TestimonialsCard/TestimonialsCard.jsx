@@ -1,19 +1,22 @@
 import React from 'react';
-import TESTIMONIALS_PROFILE from "../../Images/testimonials-profile.png";
+// import TESTIMONIALS_PROFILE from "../../Images/testimonials-profile.png";
 import FILL_STAR from "../../Images/icon/fillstar.svg"
 import UNFILL_STAR from "../../Images/icon/unfill-star.svg"
 
 
-const TestimonialsCard = () => {
+const TestimonialsCard = (props) => {
+
+    const testimonialData = props.data;
     const review = 5;
+    
     return (
         <div id="testimonials-card">
             <div className="testimonials-card__container">
                 <div className="testimonials-card__review-text">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maxime iusto ex? Placeat accusamus autem repellendus debitis veritatis similique error ipsam facere vel culpa! Quam
-                        excepturi asperiores nostrum, laborum earum reprehenderit quod est? At voluptatum sed omnis et incidunt veniam eos quae nam? Fuga quidem sapiente dolorem, dolorum omnis
-                        commodi.
+                       {
+                           testimonialData.review
+                       }
                     </p>
                 </div>
 
@@ -26,9 +29,9 @@ const TestimonialsCard = () => {
                     ))}
                 </div>
                 <div className="testimonials-card__user-info">
-                    <h4 className="name">Jhone Deo</h4>
-                    <p className="title">Graphic Designer</p>
-                    <img src={TESTIMONIALS_PROFILE} className="profile" alt="" />
+                    <h4 className="name">{testimonialData.name }</h4>
+                    <p className="title">{testimonialData.proffesion}</p>
+                    <img src={testimonialData.image} className="profile" alt="" />
                 </div>
             </div>
         </div>

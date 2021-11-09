@@ -7,7 +7,8 @@
     --grey-color: #c1c1c1;
     --dark-text: black;
     --white-color: white;
-    --secondary: #00a8ff;
+    // --secondary: #00a8ff;
+    --secondary: #71819A;
     --secondary-very-light: #7fd3ff;
     --dark-overlay-1: #0000005d;
     --lg-heading: 8.8rem;
@@ -323,45 +324,94 @@ contact us page css here
 */
 
 #contact-us-form {
-    min-height: 100vh;
     width: 100%;
-    background: url("../Images/contactus-page-form-background.jpg") no-repeat center;
     background-color: rgba(0, 0, 0, 0.253);
     background-blend-mode: soft-light;
     background-attachment: fixed;
-    background-size: cover;
     position: relative;
     z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .form-area {
-        .contact-form-input_wrapper {
-            padding: 10px;
-
-            .contact-form-input {
-                border: none;
-                font-size: 20px;
-                font-weight: 700;
-                padding: 10px;
-                width: 100%;
-                font-style: italic;
-                &:focus {
-                    color: var(--white-color);
-                    background: var(--primary);
-                    box-shadow: none;
-                    &::placeholder {
-                        color: white;
-                    }
+    $primary: #ff9452;
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    section.contact-form-section{
+        background: $primary;
+        color: #fff;
+        padding: 100px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .title{
+            h2{
+                font-weight: bold;
+                font-size: 60px;
+            }
+        }
+        .after{
+            width: 150px;
+            height: 8px;
+            background: #fff;
+            border-radius: 25px;
+        }
+        .description{
+            p{
+                font-size:25px;
+                font-weight: bold;
+                margin-bottom: 50px;
+            }
+        }
+        .the-form{
+            padding: 0px 80px;
+                @media screen and (max-width: 800px){
+                    padding: 0px;
                 }
-                &::placeholder {
-                    color: var(--grey-color);
-                    font-weight: 600;
+            form{
+                color: rgba(255, 255, 255, 0.65);
+                .form-control:focus, .form-control:active{
+                    outline: none;
+                    box-shadow: none;
+                }
+                input,textarea{
+                    transition: 0.8s;
+                    color: #fff;
+                    padding: 20px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border: none;
+                    border-radius: 8px;
+                    height: auto;
+                    font-size: 20px;
+                    font-weight: bold;
+                    &[type="submit"]{
+                        background: none;
+                        margin-top: 20px;
+                        border: 3px solid rgba(255, 255, 255, 0.8);
+                        padding: 15px 80px;
+                        font-weight: bold;
+                        color: rgba(255, 255, 255, 0.8);
+                        &:hover{
+                            color: $primary;
+                            background: #fff;
+                        }
+                    }
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    &:focus{
+                        // border-color: rgba(255, 255, 255, 0.6);
+                        border-bottom: 5px solid rgba(255, 255, 255, 0.6);
+                    }
+                    
                 }
             }
         }
     }
+
+    
 }
 
 #contact-page {
@@ -465,7 +515,7 @@ section#business {
 /* COMMENT FAQ Page Design */
 
 #Faq-answer-question {
-    background: var(--primary-very-light);
+    background: var(--primary-very-light);   
     position: relative;
     z-index: 5;
     padding: 3rem 0;
@@ -478,9 +528,9 @@ section#business {
 }
 
 /* Services Page Design */
-/* #services-page{
-
-} */
+//  #services-page{
+//     scroll-behavior: smooth;
+// } 
 
 #services_section {
     padding: 4rem 0;
