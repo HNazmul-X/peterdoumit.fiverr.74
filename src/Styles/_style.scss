@@ -140,12 +140,11 @@ header {
         left: 0px;
     }
 
-    @media screen and (max-width:$md-breakpoint) {
-        #header-svg{
-            width: 50px;;
+    @media screen and (max-width: $md-breakpoint) {
+        #header-svg {
+            width: 50px;
             display: none;
         }
-        
     }
 }
 @media screen and (min-width: 992px) {
@@ -492,7 +491,66 @@ section#business {
         --text-display: none;
         margin-bottom: 3rem;
     }
-    .right-site{
+    .right-site {
         margin-top: 12rem;
     }
+    // .slider-pages {
+    //     overflow: hidden;
+    //     position: relative;
+    //     height: 100vh;
+    // }
+    
+    // .slider-wrapper{
+    //     position: fixed;
+    //     z-index: 6;
+    //     width: 1140px;
+    //     height: 100vh;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // top: 5vh;
+    // }
+
+    // .slider-page {
+    //     position: absolute;
+    //     top: 0;
+    //     width: 50%;
+    //     height: 100vh;
+    //     transition: transform 1350ms;
+    // }
+
+    // .js-scrolling__page {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    // }
+
+    // .js-scrolling__page {
+    //     transform: translateY(-100%);
+    //     transition: 0.4s;
+    //     &.js-scrolling--active {
+    //         transform: translateY(0);
+    //     }
+    //     .services-card {
+    //         width: 100%;
+    //         height: 100%;
+    //         background: red;
+    //         height: 89vh;
+    //         display: flex;
+    //         font-size: 100px;
+    //         align-items: center;
+    //         justify-content: center;
+    //         color: white;
+    //     }
+    //     &.js-scrolling__page-2 {
+    //         .services-card {
+    //             background: blue;
+    //         }
+    //     }
+    //     &.js-scrolling__page-3 {
+    //         .services-card {
+    //             background: purple;
+    //         }
+    //     }
+    // }
 }
