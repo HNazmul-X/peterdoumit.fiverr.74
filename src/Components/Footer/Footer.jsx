@@ -26,14 +26,14 @@ const Footer = () => {
         <footer id="footer">
             <div className="footer-static-upper">
                 <div className="container-xxl">
-                    <h2 className="text-center">Business Address: 45 Simmat Ave, Condell Park NSW 2200</h2>
+                    <h2 className="text-center">We’re hiring! Send your cv to hello@doumitdigital.com.au</h2>
                 </div>
             </div>
 
             <div className="footer-fixed-parallax">
                 ``
                 <div className="container-xxl text-center">
-                    <h1 className="display-1 fw-bolder text-light">Say hello</h1>
+                    <h1 className="display-1 fw-bolder text-light">Say hello!</h1>
                     <p className="mt-3 fs-5 text-light col-12 col-lg-9 mx-auto">
                         Have a new project in mind? Schedule a 30 minute discovery call with our experts and we will at the very least give you some great advice.
                     </p>

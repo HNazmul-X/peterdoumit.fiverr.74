@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NAV_LOGO  from "../../Images/nav-logo.png"
+import NAV_LOGO from "../../Images/nav-logo.png";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -17,13 +17,14 @@ const Nav = () => {
             text: "Home",
         },
         {
-            path: "/faq",
-            text: "FAQ",
-        },
-        {
             path: "/services",
             text: "Services",
         },
+        {
+            path: "/faq",
+            text: "FAQ",
+        },
+
         {
             path: "/contact",
             text: "Contact Us",
@@ -47,7 +48,7 @@ const Nav = () => {
                 <div className="navbar__navbar-items_container container">
                     {routes.map((route) => (
                         <div className="navbar__navbar-items">
-                            <Link to={route.path} onClick={()=> setIsIconClicked(!isIconClicked)}  className="navbar__navbar-link">
+                            <Link to={route.path} onClick={() => setIsIconClicked(!isIconClicked)} className="navbar__navbar-link">
                                 <h1>{route.text}</h1>
                             </Link>
                         </div>
