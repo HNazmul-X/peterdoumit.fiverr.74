@@ -9,7 +9,7 @@ const WhatWeDo = () => {
     return (
         <section id="what-we-do">
             <div className="container-xxl">
-                <SectionTitle className={"mb-5 text-center"} title="What We do">
+                <SectionTitle className={"mb-5 text-center text-uppercase"} title="What We do">
                 </SectionTitle>
                 
                 <div className="row row-cols-1 col-12 col-lg-10 row-cols-sm-2 col-12 mx-auto row-cols-lg-2">

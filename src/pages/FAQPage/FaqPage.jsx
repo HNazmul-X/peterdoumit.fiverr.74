@@ -5,7 +5,7 @@ import AnswerQuestion from './AnswerQuestion';
 const FaqPage = () => {
     return (
         <main id="faq-page">
-            <Header titleLg={true} title="Frequently Asked Question."></Header>
+            <Header titleLg={true} title="Frequently Asked Question?"></Header>
             <AnswerQuestion/>
         </main>
     );

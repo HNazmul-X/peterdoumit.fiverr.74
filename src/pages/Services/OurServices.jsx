@@ -9,7 +9,7 @@ const ServicesSection = () => {
     return (
         <section id="services_section">
             <div className="container-xxl">
-                <SectionTitle title="Our Services"/>
+                <SectionTitle className="text-center" title="Our Services"/>
                 <div className="row">
                     <div className="left-site col-12 col-md-7 col-lg-5 mx-auto">
                         {

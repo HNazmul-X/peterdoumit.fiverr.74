@@ -15,7 +15,8 @@ const ServicesCard = (props) => {
                 <h4>{data.title}</h4>
                 <p></p>
                 <div className="text-center">
-                    <button className="btn mt-2 btn-outline-light fs-5 border-2">{data.description}</button>
+                    <p className="fs-6">{data.description}</p>
+                    <button className="btn mt-2 btn-outline-light fs-5 border-2">Request a Quote</button>
                 </div>
             </div>
 
