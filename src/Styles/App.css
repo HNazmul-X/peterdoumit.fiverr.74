@@ -13,10 +13,10 @@
   --grey-color: #c1c1c1;
   --dark-text: black;
   --white-color: white;
-  --secondary: #71819a;
+  --secondary: #485a73;
   --secondary-very-light: #526784;
   --dark-overlay-1: #0000005d;
-  --lg-heading: 8.8rem;
+  --lg-heading: 8rem;
   --md-heading: 5rem;
   --lg-shadow: 3px 6px 51px 5px rgba(0, 0, 0, 0.08);
   border-radius: 22px;
@@ -486,7 +486,7 @@ contact us page css here
   background: var(--secondary-very-light);
   color: var(--white-color);
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.329);
 }
 
 #contact-us-form .form-area .cm-input-field::-webkit-input-placeholder {
@@ -518,9 +518,9 @@ contact us page css here
   background: none;
   font-size: 1.3rem;
   width: 250px;
-  border: 3px solid var(--secondary-very-light);
+  border: 3px solid var(--white-color);
   padding: 10px;
-  color: var(--secondary-very-light);
+  color: var(--white-color);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -684,7 +684,7 @@ section#business .section-bg {
   padding-top: 7rem;
 }
 
-.btn-theme-primary-outline {
+.btn-theme-secondary-outline {
   border: 1px solid var(--primary);
   background: none;
   color: var(--primary);
