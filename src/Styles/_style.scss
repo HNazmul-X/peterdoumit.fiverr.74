@@ -376,6 +376,7 @@ contact us page css here
             background: var(--secondary-very-light);
             color:var(--white-color);
             border-radius: 5px;
+            border:1px solid white;
 
             &::placeholder{
                 color:var(--secondary);

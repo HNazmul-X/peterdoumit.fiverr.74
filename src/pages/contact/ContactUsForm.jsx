@@ -9,18 +9,18 @@ const ContactUsForm1 = () => {
                 <div className="form-area col-12 col-md-11 col-lg-9 mx-auto col-xxl-8">
                     <div className="row">
                         <div className="col-md-6 mb-2">
-                            <input type="text" placeholder="Enter Your Name" className="cm-input-field" />{" "}
+                            <input type="text" placeholder="Name" className="cm-input-field" />{" "}
                         </div>
                         <div className="col-md-6 mb-2">
-                            <input type="text" placeholder="Enter Your Email" className="cm-input-field" />{" "}
+                            <input type="text" placeholder="Email" className="cm-input-field" />{" "}
                         </div>
                     </div>
                     <div className="row mt-2">
                         <div className="col-md-6 mb-2">
-                            <input type="text" placeholder="Enter Your Company" className="cm-input-field" />{" "}
+                            <input type="text" placeholder="Company" className="cm-input-field" />{" "}
                         </div>
                         <div className="col-md-6 mb-2">
-                            <input type="text" placeholder="Enter Your Phone" className="cm-input-field" />{" "}
+                            <input type="text" placeholder="Phone" className="cm-input-field" />{" "}
                         </div>
                     </div>
                     <textarea name="" placeholder="Write your massage" id="" cols="30" rows="7" className="cm-input-field mt-2"></textarea>
